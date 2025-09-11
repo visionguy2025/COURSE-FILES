@@ -1,0 +1,22 @@
+.container {
+    background-color: rgb(220,220,220);
+    text-align: center;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    background: yellow;
+}
+
+div:nth-of-type(3) {
+    background: red;
+}
+
+#div3 {
+    background-color: greenyellow;
+}
+
+.box {
+    background-color: blue;
+}
