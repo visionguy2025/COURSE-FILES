@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 250px;
+    height: 350px;
+    margin: auto;
+    background-color: lime;
+    background-image: url(./NationalGeographic_2572187_16x9.avif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.black {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    transition: 0.2s;
+    opacity: 80%;
+}
+
+.box:hover .black{
+    /* width: 100px; */
+    height: 0;
+    /* border-radius: 50%; */
+}

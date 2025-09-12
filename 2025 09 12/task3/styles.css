@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 600px;
+    height: 400px;
+
+    background-color: rgb(24,24,24);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    
+    background-color: lime;
+
+    transition: 250ms;
+}
+
+.container:hover .box {
+    width: 100px;
+    height: 100px;
+    
+    border-radius: 50%;
+}

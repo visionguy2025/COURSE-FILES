@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 600px;
+    height: 500px;
+    background-color: lime;
+    display: flex;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    box-sizing: border-box;
+    padding: 20px 30px 40px 50px;
+}
+
+.boxMargin {
+    margin: 50px auto;
+    background-color: yellow;
+    /* border-style:groove; */
+    /* border-color: blue; */
+    border-width: 5px;
+    border-radius: 30px;
+    border-top: 3px dashed violet;
+    border-bottom: 10px dotted gray;
+    border-left: 1px solid black;
+    border-right: 5px double orangered;
+}
