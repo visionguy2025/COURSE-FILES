@@ -1,13 +1,22 @@
+:root {
+    --color-lime: lime;
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
+[class~="boxMargin"] {
+    filter: drop-shadow(0 0 20px #FF0000);
+}
+
 .container {
     width: 600px;
     height: 500px;
-    background-color: lime;
+    background-color: var(--color-lime);
     display: flex;
+    position: relative;
 }
 
 .box {
@@ -30,3 +39,29 @@
     border-left: 1px solid black;
     border-right: 5px double orangered;
 }
+
+#box {
+    width: 50px;
+    height: 50px;
+    background-color: #000000;
+    border: 1px solid rgb(255,255,255);
+
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 325px;
+    left: 275px;
+    /* animation: spinnin 1000ms linear infinite; */
+}
+
+#box:hover {
+    background-color: #FFF;
+    border: 1px solid red;
+    filter: drop-shadow(0 0 10px rgb(255,0,0));
+    /* animation: none; */
+}
+
+/* @keyframes spinnin {
+    0% {transform: rotate(0deg)}
+    50% {transform: rotate(180deg)}
+    100% {transform: rotate(360deg)}
+} */

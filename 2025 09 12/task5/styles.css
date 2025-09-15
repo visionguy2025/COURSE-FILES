@@ -1,3 +1,7 @@
+:root {
+    --shadow-color: rgb(0,255,0);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -52,12 +56,36 @@
     font-size: 20px;
     font-weight: 900;
     color: rgb(0,0,0);
-    filter: drop-shadow(0 0 10px rgb(255,0,0));
+    filter: drop-shadow(0 0 10px var(--shadow-color));
 
     opacity: 0;
 
     transition: 150ms ease-in;
     transition-delay: 150ms;
+}
+
+.text::selection {
+    background-color: yellow;
+    color: #222222;
+}
+
+/* .text::grammar-error {
+    text-decoration: underline;
+    color: rgb(255,0,0);
+    filter: drop-shadow(0 0 10px rgb(255,0,0));
+} */
+
+.text::spelling-error {
+    text-decoration: underline;
+    color: rgb(255,0,0);
+}
+
+.text::first-letter {
+    font-size: larger;
+}
+
+:not(.container, .cover, .text, body, p, div, :root) {
+    background-color: aquamarine;
 }
 
 .container:hover .text {
