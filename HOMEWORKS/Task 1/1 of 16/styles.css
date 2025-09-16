@@ -1,0 +1,19 @@
+.container {
+    max-width: 400px;
+}
+
+.paragraph {
+    width: 100%;
+}
+
+.image-box {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-box > img {
+    height: 100%;
+    transform: translateX(-40%)
+}

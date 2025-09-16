@@ -1,0 +1,11 @@
+a {
+    display: block;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+}
+
+img {
+    height: 100%;
+    transform: translateX(-25%);
+}

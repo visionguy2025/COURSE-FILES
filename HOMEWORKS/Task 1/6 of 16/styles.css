@@ -1,0 +1,30 @@
+.container {
+    max-width: 800px;
+}
+
+.image-container {
+    display: flex;
+    gap: 5px;
+}
+
+.image-box {
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+}
+
+img {
+    height: 100%;
+}
+
+img[src*="boat"] {
+    width: 100%;
+}
+
+#img_lake {
+    transform: translateX(-32%);
+}
+
+#img_eagle {
+    transform: translateX(-28%);
+}

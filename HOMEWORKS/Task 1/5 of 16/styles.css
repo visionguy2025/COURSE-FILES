@@ -1,0 +1,38 @@
+.container {
+    max-width: 800px;
+}
+
+.top {
+    margin-bottom: 50px;
+}
+
+.image-container {
+    display: flex;
+    gap: 5px;
+}
+
+.image-box {
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+}
+
+img[src="./images/424280.jpg"] {
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+img[src*="c5253fe7f3e1"] {
+    width: 100%;
+    height: 100%;
+}
+
+img[src*="books"] {
+    height: 100%;
+    transform: translateX(-30%);
+}
+
+img[src*="1024x1024"] {
+    height: 100%;
+    transform: translateX(-25%);
+}

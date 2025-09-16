@@ -1,0 +1,22 @@
+.container {
+    /*  */
+}
+
+a {
+    transition: 0.15s ease-in-out;
+}
+
+a:hover {
+    color: lime;
+}
+
+#image {
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+}
+
+img {
+    height: 100%;
+    transform: translateX(-30%);
+}

@@ -1,0 +1,26 @@
+.container {
+    max-width: 800px;
+}
+
+.top {
+    font-size: 1.2rem;
+}
+
+.paragraph {
+    width: 100%;
+}
+
+.image-container {
+    display: flex;
+    gap: 5px;
+}
+
+.image-box {
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.image-box > img {
+    height: 100%;
+}

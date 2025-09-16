@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+}
+
+#cover {
+    width: 200px;
+    height: 400px;
+    
+    background: url(./images/more_bereg_priboj_118484_5472x3648.jpg);
+    background-size: 150%;
+    background-position-x: center;
+    background-repeat: repeat-y;
+}
