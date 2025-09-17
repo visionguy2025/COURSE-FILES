@@ -1,0 +1,48 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: lime;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* flex-wrap: wrap; */
+    align-content: center;
+}
+
+/* .container:hover .box3 {
+    visibility: visible;
+} */
+
+.box {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3em;
+}
+
+.box1 {
+    background-color: red;
+    align-self: self-start;
+    display: none;
+}
+
+.box2 {
+    background-color: orange;
+    order: 2;
+}
+
+.box3 {
+    background-color: steelblue;
+    visibility: hidden;
+}
+
+.box4 {
+    background-color: aquamarine;
+}

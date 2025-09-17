@@ -1,0 +1,51 @@
+:root {
+    --bg-color: #ffffff;
+    --padding-all: 10%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--padding-all);
+}
+
+.logo {
+    cursor: pointer;
+}
+
+header nav {
+    width: 50%;
+    font: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header ul {
+    display: flex;
+    gap: 0 40px;
+    align-items: center;
+    justify-content: start;
+}
+
+nav a {
+    color: black;
+    font-weight: 600;
+}
+
+section:first-of-type {
+    width: 100%;
+    height: 100vh;
+    background: url(./assets/banner.png.webp);
+    background-size: 100% 82%;
+    background-repeat: no-repeat;
+}
