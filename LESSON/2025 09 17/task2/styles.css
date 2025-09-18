@@ -1,40 +1,101 @@
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ GLOBAL • START ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
 :root {
     --bg-color: #ffffff;
+    --theme-color: #ff3500;
+    --grey-color: #909092;
+
+    --max-width: 1140px;
+    --min-height: 100vh;
     --padding-all: 10%;
+
+    --fontFamily: Arial, Helvetica, sans-serif;
+    --customLineHeight: 30px;
+
+    --defaultTransition: 250ms ease-in-out;
 }
 
 * {
     margin: 0;
     padding: 0;
+
     box-sizing: border-box;
+
     list-style: none;
     text-decoration: none;
+
+    font-family: var(--fontFamily);
 }
 
+.flex-cc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-bc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    min-height: var(--min-height);
+}
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ GLOBAL • END ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+
+
+
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ HEADER • START ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
 header {
     width: 100%;
-    height: 14vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    height: 100px;
+
+    background-color: var(--bg-color);
+
     padding: 0 var(--padding-all);
+
+    position: static;
+    top: 0;
+    left: 0;
+
+    opacity: 90%;
+}
+
+.headerContainer {
+    width: 100%;
+    max-width: var(--max-width);
+    height: 100px;
 }
 
 .logo {
     cursor: pointer;
 }
 
+.logo img {
+    height: 100%;
+}
+
 header nav {
     width: 50%;
+    height: 100%;
+    /* font-size: 1.2em; */
     font: 1.2em;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: var(--fontFamily); */
 }
 
 header ul {
     display: flex;
-    gap: 0 40px;
+    width: 100%;
+    height: 100%;
+    /* gap: 0 40px; */
     align-items: center;
-    justify-content: start;
+    justify-content: space-between;
+}
+
+header i {
+    font-size: 0.5em;
 }
 
 nav a {
@@ -42,10 +103,254 @@ nav a {
     font-weight: 600;
 }
 
-section:first-of-type {
+header li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+
+    position: relative;
+}
+
+.header_dropdown {
+    position: absolute;
+    top: 100%;
+
+    transition: var(--defaultTransition);
+
+    width: 200px;
+    height: fit-content;
+
+    background-color: #ffffff;
+}
+
+.header_dropdown ul {
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.header_dropdown li {
+    padding: 10px 15px;
+}
+
+#menu_blog:hover #dropdown_blog {
+    visibility: visible;
+    /* display: block; */
+}
+
+#dropdown_blog {
+    left: 0;
+    visibility: hidden;
+    /* display: none; */
+}
+
+#menu_pages:hover #dropdown_pages {
+    visibility: visible;
+}
+
+#dropdown_pages {
+    left: 0;
+    visibility: hidden;
+}
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ HEADER • END ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+
+
+
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ MAIN/HOME • START ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+.home {
     width: 100%;
     height: 100vh;
+
     background: url(./assets/banner.png.webp);
-    background-size: 100% 82%;
+    background-size: 100% 96%;
+    background-repeat: no-repeat;
+
+    padding: 0 var(--padding-all);
+}
+
+.home article {
+    width: 100%;
+}
+
+.homeLeft {
+    width: 35%;
+    color: #ffffff;
+}
+
+.homeLeft h2 {
+    font-size: 4.2em;
+    font-weight: 100;
+}
+
+.homeLeft strong {
+    font-weight: 900;
+}
+
+.homeLeft p {
+    line-height: 2;
+    margin: 20px 0 50px 0;
+}
+
+.homeLeft button {
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
+
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+    color: var(--theme-color);
+}
+
+.homeRight {
+    width: 60%;
+    height: 100%;
+}
+
+.homeRight img {
+    width: 100%;
+}
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ MAIN/HOME • END ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+
+
+
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ MAIN/SERVICES • START ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+.services {
+    width: 100%;
+    height: 100vh;
+}
+
+.services article {
+    flex-direction: column;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicesTop {
+    text-align: center;
+    width: 60%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.servicesTop h2 {
+    font-size: 3.4em;
+}
+
+.servicesTop p {
+    color: var(--grey-color);
+    line-height: var(--customLineHeight);
+}
+
+.servicesCardContainer {
+    display: flex;
+    gap: 30px;
+}
+
+.card {
+    width: 350px;
+    height: 450px;
+
+    border-radius: 10px;
+    
+    box-shadow: 0 0 2px var(--theme-color);
+
+    flex-direction: column;
+
+    transition: var(--defaultTransition);
+}/* DISPLAY FLEX CENTER CAUSED VOID ON CARD UP-BOTTOM SIDES, FIX HOVER */
+
+.card:hover {
+    box-shadow: 0 0 30px rgb(220,220,220);
+}
+
+.card__img {
+    width: 160px;
+    height: 140px;
+
+    background: url(./assets/service_icon_bg_1.png);
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
+
+.card h3 {
+    font-size: 1.6em;
+    margin: 40px 0;
+}
+
+.card p {
+    color: var(--grey-color);
+    line-height: var(--customLineHeight);
+    text-align: center;
+    padding: 0 25px;
+}
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ MAIN/SERVICES • END ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+
+
+
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ MAIN/ABOUT • START ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+.about {
+    width: 100%;
+    height: 100vh;
+}
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ MAIN/ABOUT • END ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+
+
+
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ MAIN/INFO • START ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+.info {
+    width: 100%;
+    height: 100vh;
+}
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ MAIN/INFO • END ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+
+
+
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ MAIN/COMMENTS • START ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+.comments {
+    width: 100%;
+    height: 100vh;
+}
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ MAIN/COMMENTS • END ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+
+
+
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ MAIN/TEAM • START ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+.team {
+    width: 100%;
+    height: 100vh;
+}
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ MAIN/TEAM • END ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+
+
+
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ MAIN/CONTACT • START ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+.contact {
+    width: 100%;
+    height: 100vh;
+}
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ MAIN/CONTACT • END ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+
+
+
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ FOOTER • START ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+footer {
+    width: 100%;
+    /* height: 200px; */
+}
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ FOOTER • END ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+
+
+
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ RESPONSIVITY • START ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */
+@media (min-width: 640px) and (max-width: 1140px) {
+    /* body {
+        background-color: lime;
+    } */
+}
+/* ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ RESPONSIVITY • END ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ */

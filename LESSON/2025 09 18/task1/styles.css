@@ -1,0 +1,11 @@
+td, th {
+    width: 200px;
+}
+
+th, td {
+    height: 40px;
+}
+
+tbody td {
+    height: 100px;
+}

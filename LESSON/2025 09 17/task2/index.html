@@ -14,119 +14,145 @@
     </head>
     <body>
 
-        <header>
-            <div class="logo">
-                <img src="./assets/logo.png.webp" alt="logo">
-            </div>
+        <!-- HEADER -->
+        <header class="flex-cc">
+            <div class="flex-bc headerContainer">
+                <div class="logo">
+                    <img src="./assets/logo.png.webp" alt="logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                About
+                            </a>
+                        </li>
+                        <li id="menu_blog">
+                            <a href="#">
+                                Blog
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
 
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Blog
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Pages
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Service
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            
+                            <div id="dropdown_blog" class="header_dropdown flex-cc">
+                                <ul>
+                                    <li>
+                                        <a href="#blog">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="#singleBlog">Single-Blog</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li id="menu_pages">
+                            <a href="#">
+                                Pages
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+
+                            <div id="dropdown_pages" class="header_dropdown flex-cc">
+                                <ul>
+                                    <li>
+                                        <a href="#">Elements</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Service
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <main>
-            <section>
-                <article>
-                    <h2>
-                        <span>We Care</span>
-                        <br>
-                        <strong>Your Pets</strong>
-                    </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, magni maxime!
-                    </p>
-                    <button>
-                        Contact Us
-                    </button>
-                </article>
-
-                <div>
-                    <img src="./assets/dog.png.webp" alt="image">
-                </div>
-            </section>
-
-            <section>
-                <article>
-                    <h2>
-                        Services for every dog
-                    </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto eum distinctio illum ut consequatur quia nemo veritatis explicabo!
-                    </p>
-                </article>
-                <article>
-                    <div class="card">
-                        <div class="card__img">
-                            <img src="./assets/service_icon_1.png.webp" alt="image">
-                        </div>
-                        <h3>
-                            Pet Boarding
-                        </h3>
+            <!-- HOME -->
+            <section class="home flex-cc">
+                <article class="flex-bc container">
+                    <div class="homeLeft">
+                        <h2>
+                            We Care
+                            <br>
+                            <strong>Your Pets</strong>
+                        </h2>
                         <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam blanditiis eum harum nihil at!
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, magni maxime!
                         </p>
+                        <button>
+                            Contact Us
+                        </button>
                     </div>
-
-                    <div class="card">
-                        <div class="card__img">
-                            <img src="./assets/service_icon_2.png.webp" alt="image">
-                        </div>
-                        <h3>
-                            Pet Boarding
-                        </h3>
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam blanditiis eum harum nihil at!
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <div class="card__img">
-                            <img src="./assets/service_icon_3.png.webp" alt="image">
-                        </div>
-                        <h3>
-                            Pet Boarding
-                        </h3>
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam blanditiis eum harum nihil at!
-                        </p>
+                    <div class="homeRight flex-cc">
+                        <img src="./assets/dog.png.webp" alt="image">
                     </div>
                 </article>
             </section>
 
+            <!-- SERVICES -->
+            <section class="services flex-cc">
+                <article class="container">
+                    <div class="servicesTop">
+                        <h2>
+                            Services for every dog
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto eum distinctio illum ut consequatur quia nemo veritatis explicabo!
+                        </p>
+                    </div>
+                    <div class="servicesCardContainer">
+                        <div class="card flex-cc">
+                            <div class="card__img flex-cc">
+                                <img src="./assets/service_icon_1.png.webp" alt="image">
+                            </div>
+                            <h3>
+                                Pet Boarding
+                            </h3>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam blanditiis eum harum nihil at!
+                            </p>
+                        </div>
+    
+                        <div class="card flex-cc">
+                            <div class="card__img flex-cc">
+                                <img src="./assets/service_icon_2.png.webp" alt="image">
+                            </div>
+                            <h3>
+                                Pet Boarding
+                            </h3>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam blanditiis eum harum nihil at!
+                            </p>
+                        </div>
+    
+                        <div class="card flex-cc">
+                            <div class="card__img flex-cc">
+                                <img src="./assets/service_icon_3.png.webp" alt="image">
+                            </div>
+                            <h3>
+                                Pet Boarding
+                            </h3>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam blanditiis eum harum nihil at!
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- ABOUT -->
             <section>
                 <div>
                     <img src="./assets/pet_care.png.webp" alt="image">
@@ -147,6 +173,7 @@
                 </article>
             </section>
 
+            <!-- INFO -->
             <section>
                 <article>
                     <h2>
@@ -199,6 +226,7 @@
                 </div>
             </section>
 
+            <!-- COMMENTS -->
             <section>
                 <div class="carousel__container">
                     <div class="carouselCard">
@@ -288,6 +316,7 @@
                 </div>
             </section>
 
+            <!-- TEAM -->
             <section>
                 <div>
                     <h2>
@@ -343,6 +372,7 @@
                 </div>
             </section>
 
+            <!-- CONTACT -->
             <section>
                 <h2>
                     Why go with Anipat?
@@ -364,6 +394,7 @@
             </section>
         </main>
 
+        <!-- FOOTER -->
         <footer>
             <div>
                 <ul>
@@ -428,5 +459,18 @@
         </footer>
 
         <!-- https://preview.colorlib.com/theme/anipat/ -->
+         <script>
+            window.addEventListener('scroll', () => {
+                var scroll = window.scrollY
+                var headerStatus = document.getElementsByTagName('header')[0].style
+                if(scroll < 400) {
+                    headerStatus.position = `static`
+                    headerStatus.top = 0
+                } else {
+                    headerStatus.position = `sticky`
+                    headerStatus.top = 0
+                }
+            })
+         </script>
     </body>
 </html>
