@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container {}
+
+.box {}
+
+@media (300px <= width <= 1280px) {
+    body {background-color: red;}
+}
+@media (max-height: 1280px) {}
+@media (max-height: 1280px) {}
