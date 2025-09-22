@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- TITLE -->
+        <title> Colorlib • . </title>
+
+        <!-- EXTERNAL CUSTOM STYLE SHEETS -->
+        <link rel="stylesheet" href="./styles.css">
+
+        <!-- FONT AWESOME CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header>
+            <div>
+                <!-- LOGO -->
+                <div>
+                    <a href="#">
+                        Photosen
+                    </a>
+                </div>
+
+                <!-- NAVBAR -->
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#"> Home </a>
+                        </li>
+                        <li id="gallery__li">
+                            <a href="#"> Gallery <i class="fa-solid fa-chevron-down"></i> </a>
+
+                            <div id="gallery__dropdown">
+                                <ul>
+                                    <li>
+                                        <a href="#"> Nature </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Portrait </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> People </a>
+                                    </li>
+                                    <li><a href="#"> Arch
+                                        itecture </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Animals </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Sports </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Travel </a>
+                                    </li>
+                                    <li id="submenu__li">
+                                        <a href="#"> Sub Menu <i class="fa-solid fa-chevron-right"></i> </a>
+
+                                        <!-- SUB MENU DROPDOWN -->
+                                        <div id="submenu__dropdown">
+                                            <ul>
+                                                <li><a href="#"> Menu One </a></li>
+                                                <li><a href="#"> Menu Two </a></li>
+                                                <li><a href="#"> Menu Three </a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#"> Services </a>
+                        </li>
+                        <li>
+                            <a href="#"> About </a>
+                        </li>
+                        <li>
+                            <a href="#"> Contact </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- SOCIAL -->
+                <div>
+                    <ul>
+                        <li>
+                            <a href="https://facebook.com/">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://youtube.com/">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN -->
+        <main>
+            <section>
+                <!-- JS -->
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <div>
+                <p> Copyright ©2025 All rights reserved | This template is made with <i class="fa-regular fa-heart"></i> by <a href="#">Colorlib</a> </p>
+            </div>
+        </footer>
+        
+        <!-- INTERNAL JAVASCRIPT -->
+        <script>
+            const HOMEPAGE_DATABASE = [
+                ['Nature', './assets/img_1.jpg.webp'], // 1
+                ['Portrait', './assets/img_2.jpg.webp'], // 2
+                ['People', './assets/img_3.jpg.webp'], // 3
+                ['Architecture', './assets/img_4.jpg.webp'], // 4
+                ['Animals', './assets/img_5.jpg.webp'], // 5
+                ['Sports', './assets/img_6.jpg.webp'], // 6
+                ['Travels', './assets/img_7.jpg.webp'], // 7
+                ['People', './assets/img_3.jpg.webp'], // 8
+                ['Architecture', './assets/img_4.jpg.webp'] // 9
+            ]
+
+            const homepageContainer = document.querySelector('main > section')
+            const allHomeCards = ''
+
+            HOMEPAGE_DATABASE.forEach(
+                (element, index) => {
+                    const homepageCard = `
+                        <div class="galleryCard" id="galleryCard_${index}">
+                            <img src="${element[1]}" alt="image">
+        
+                            <div>
+                                <h3> ${element[0]} </h3>
+                                <a href="#"><button> MORE PHOTOS </button></a>
+                            </div>
+                        </div>
+                    `
+                    homepageContainer.innerHTML += homepageCard
+                }
+            )
+        </script>
+
+        <!-- https://preview.colorlib.com/theme/photosen/ -->
+    </body>
+</html>

@@ -534,22 +534,24 @@
                     }
                 )
             }
-        
+
             // MOBILE HEADER BUTTON
             const mobileBtn = document.getElementById('mobileHeaderBtn')
             const navBar = document.querySelector('header nav')
             let isHovering = false
             let customTimeInMilliSeconds = 500
+            let maxWidth = window.innerWidth
             const navbarVisibility = () => {
                 setTimeout(
                     () => {
-                        console.log(isHovering)
-                        if(!isHovering) {
-                            navBar.style.display = `none`
-                            mobileBtn.innerHTML = `<i class="fa-solid fa-bars"></i>`
-                        } else {
-                            navBar.style.display = `block`
-                            mobileBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+                        if(window.innerWidth <= 768) {
+                            if(!isHovering) {
+                                navBar.style.display = `none`
+                                mobileBtn.innerHTML = `<i class="fa-solid fa-bars"></i>`
+                            } else {
+                                navBar.style.display = `block`
+                                mobileBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+                            }
                         }
                     }, customTimeInMilliSeconds
                 )
@@ -564,6 +566,13 @@
                 customTimeInMilliSeconds = 500
                 navbarVisibility()
             })
+            mobileBtn.addEventListener('click', () => {
+                if(document.querySelector('header nav').style.display == `block`) {
+                    isHovering = false
+                }
+                customTimeInMilliSeconds = 500
+                navbarVisibility()
+            })
             navBar.addEventListener('mouseenter', () => {
                 isHovering = true
                 customTimeInMilliSeconds = 500
@@ -574,6 +583,12 @@
                 customTimeInMilliSeconds = 500
                 navbarVisibility()
             })
+            window.addEventListener('resize', (event) => {
+                if(window.innerWidth > 768 && navBar.style.display != 'block') {
+                    navBar.style.display = 'block'
+                }
+            }
+            )
         </script>
 
         <!-- https://preview.colorlib.com/theme/anipat/ -->

@@ -1,0 +1,87 @@
+/* ===================== GLOBAL •• START ===================== */
+:root {
+    --default__transition: 150ms ease-in-out;
+    --default__bg: #000;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+/* ===================== GLOBAL •• END ===================== */
+
+
+
+
+
+/* ===================== COMMONS •• START ===================== */
+.container {}
+/* ===================== COMMONS •• END ===================== */
+
+
+
+
+
+/* ===================== HEADER •• START ===================== */
+header {
+    width: 100%;
+    background-color: var(--default__bg);
+}
+header > div {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+header > div div {}
+header > div div a {}
+header nav {}
+header nav li {}
+header nav li a {}
+#gallery__li {}
+#submenu__li {}
+#gallery__dropdown {}
+#gallery__dropdown ul {}
+#submenu__dropdown {}
+#submenu__dropdown ul {}
+header i {}
+/* ===================== HEADER •• END ===================== */
+
+
+
+
+
+/* ===================== MAIN •• START ===================== */
+main {}
+main > section {}
+main > section > article {}
+.galleryCard {}
+.galleryCard img {}
+.galleryCard div {}
+.galleryCard div h3 {}
+.galleryCard div a {}
+.galleryCard div a button {}
+/* ===================== MAIN •• END ===================== */
+
+
+
+
+
+/* ===================== FOOTER •• START ===================== */
+footer {}
+footer div {}
+footer div p {}
+footer i {}
+/* ===================== FOOTER •• END ===================== */
+
+
+
+
+
+/* ===================== RESPONSIVITY •• START ===================== */
+@media (max-width: 360) {}
+@media (max-width: 768) {}
+@media (max-width: 1280) {}
+/* ===================== RESPONSIVITY •• END ===================== */
