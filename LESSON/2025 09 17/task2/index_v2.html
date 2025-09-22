@@ -18,7 +18,7 @@
         
         <!-- HEADER -->
         <header>
-            <div class="container">
+            <div class="headerContainer">
                 <div class="logo_box">
                     <img src="./assets/logo.png.webp" alt="logo">
                 </div>
@@ -65,6 +65,11 @@
                     </ul>
                 </nav>
             </div>
+
+            <button id="mobileHeaderBtn">
+                <i class="fa-solid fa-bars"></i>
+                <!-- <i class="fa-solid fa-xmark"></i> -->
+            </button>
         </header>
 
         <!-- MAIN -->
@@ -166,15 +171,15 @@
                     <div class="infoLeft">
                         <div>
                             <h2>
-                                We care your pet
+                                We need your
                                 <br>
-                                <strong>As you care</strong>
+                                <strong>help Adopt Us</strong>
                             </h2>
                             <p>
                                 Lorem ipsum dolor sit , consectetur adipiscing elit, sed do iusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan.
                             </p>
                             <button>
-                                About Us
+                                Contact Us
                             </button>
                         </div>
                     </div>
@@ -211,7 +216,7 @@
             <!-- COMMENTS -->
             <section class="comments">
                 <article>
-                    <div class="commentCard">
+                    <!-- <div class="commentCard">
                         <div>
                             <img src="./assets/1.png (1).webp" alt="profile">
                         </div>
@@ -270,7 +275,7 @@
                                 <button>→</button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </article>
             </section>
 
@@ -319,7 +324,25 @@
             </section>
 
             <!-- CONTACT -->
-            <section class="contact"></section>
+            <section class="contact">
+                <article>
+                    <h2>
+                        Why go with Anipat?
+                    </h2>
+                    <p>
+                        Because we know that even the best technology is only as good as the people behind it. 24/7 tech support.
+                    </p>
+                    <div>
+                        <button>
+                            Contact Us
+                        </button>
+                        Or
+                        <a href="#">
+                            +880 4664 216
+                        </a>
+                    </div>
+                </article>
+            </section>
         </main>
 
         <!-- FOOTER -->
@@ -382,9 +405,178 @@
                 Copyright ©2025 All rights reserved | This template is made with <i class="fa-regular fa-heart"></i> by <a href="#">Colorlib</a>
             </div>
         </footer>
-
+        
         <!-- CUSTOM SCRIPT -->
-         <!-- <script></script> -->
+        <script>
+            // RANDOM ARRAY TO PRETEND WORK WITH API
+            const FAKE_DATABASE = [
+                111,
+                'Lorem',
+                true,
+                `test123`,
+                10.5
+            ]
+            const translateBase = -50
+            let currentIndex = 0
+            
+            // ADAPTIVE HEADER FEATURE
+            window.addEventListener('scroll', () => {
+                var scroll = window.scrollY
+                var headerStatus = document.getElementsByTagName('header')[0].style
+                if(scroll < 400) {
+                    headerStatus.position = `static`
+                    headerStatus.top = 0
+                } else {
+                    headerStatus.position = `sticky`
+                    headerStatus.top = 0
+                }
+                document.getElementById('mobileHeaderBtn').style.top = `25px`
+            })
+
+            // BRING ALL COMMENT CARDS ON LOAD
+            const loadComments = () => {
+                const commentContainer = document.querySelectorAll('.comments > article')[0]
+                let current_comment_cards = ''
+                FAKE_DATABASE.forEach(
+                    (element, index) => {
+                        // SET CUSTOM UNIQUE BACKGROUND COLOR TO SEPARATE VISUALLY THE SAME COMMENT CARDS
+                        var randomRGBvalues = [
+                            Math.round(Math.random()*255),
+                            Math.round(Math.random()*255),
+                            Math.round(Math.random()*255)
+                        ]
+                        // SET POSITION OF EACH CARDS
+                        var translateBase = -50
+                        if(FAKE_DATABASE.length > 2 && index == FAKE_DATABASE.length-1) {
+                            var uniqueTranslateX = translateBase - 110
+                        } else {
+                            var uniqueTranslateX = translateBase + (index*110)
+                        }
+                        // SET OPACITY
+                        if(uniqueTranslateX == -50) {
+                            var customOpacity = 100
+                        } else {
+                            var customOpacity = 25
+                        }
+                        if(index == 0) {var isCurrent = `flex`} else {var isCurrent = `none`}
+                        let commentCard = `
+                            <div class="commentCard" id="commentCard_${index}" style="
+                                background-color: rgba(${randomRGBvalues}, 10%);
+                                transform: translate(${uniqueTranslateX}%, -50%);
+                                opacity: ${customOpacity}%;
+                            ">
+                                <div>
+                                    <img src="./assets/1.png (1).webp" alt="profile">
+                                </div>
+                                <div>
+                                    <div>
+                                        <h4>Jhon Walker</h4>
+                                        <p>Head of web design</p>
+                                    </div>
+                                    <div>
+                                        <span>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci.
+                                        </span>
+                                    </div>
+                                    <div style="display: ${isCurrent};" id="commentCard_${index}_buttons">
+                                        <button id="commentCard_${index}_btnPrev" onclick="slideCard('left')">←</button>
+                                        <button id="commentCard_${index}_btnNext" onclick="slideCard('right')">→</button>
+                                    </div>
+                                </div>
+                            </div>
+                        `
+                        current_comment_cards += commentCard
+                    }
+                )
+                commentContainer.innerHTML = current_comment_cards
+            }
+            loadComments()
+
+            // CAROUSEL FEATURE FOR COMMENTS SECTION CARDS
+            const slideCard = (direction) => {
+                const allCommentCards = document.querySelectorAll('.commentCard')
+                if(direction == 'right') {
+                    if(currentIndex == FAKE_DATABASE.length-1) {
+                        if(FAKE_DATABASE.length > 2) {
+                            currentIndex = 0
+                        }
+                    } else {
+                        currentIndex += 1
+                    }
+                } else if(direction == 'left') {
+                    if(currentIndex == 0) {
+                        if(FAKE_DATABASE.length > 2) {
+                            currentIndex = FAKE_DATABASE.length-1
+                        }
+                    } else {
+                        currentIndex -= 1
+                    }
+                }
+                allCommentCards.forEach(
+                    (element, index) => {
+                        var uniqueTranslateX = translateBase + (index-currentIndex)*110
+
+                        if(FAKE_DATABASE.length > 2 && currentIndex == FAKE_DATABASE.length-1 && index == 0) {
+                            element.style.transform = `translate(60%, -50%)`
+                        } else if(FAKE_DATABASE.length > 2 && currentIndex == 0 && index == FAKE_DATABASE.length-1) {
+                            element.style.transform = `translate(-160%, -50%)`
+                        } else {
+                            element.style.transform = `translate(${uniqueTranslateX}%, -50%)`
+                        }
+
+                        if(index == currentIndex) {
+                            element.style.opacity = `100%`
+                            document.getElementById(`commentCard_${index}_buttons`).style.display = `flex`
+                        } else {
+                            element.style.opacity = `25%`
+                            document.getElementById(`commentCard_${index}_buttons`).style.display = `none`
+                        }
+                    }
+                )
+            }
+        
+            // MOBILE HEADER BUTTON
+            const mobileBtn = document.getElementById('mobileHeaderBtn')
+            const navBar = document.querySelector('header nav')
+            let isHovering = false
+            let customTimeInMilliSeconds = 500
+            const navbarVisibility = () => {
+                setTimeout(
+                    () => {
+                        console.log(isHovering)
+                        if(!isHovering) {
+                            navBar.style.display = `none`
+                            mobileBtn.innerHTML = `<i class="fa-solid fa-bars"></i>`
+                        } else {
+                            navBar.style.display = `block`
+                            mobileBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+                        }
+                    }, customTimeInMilliSeconds
+                )
+            }
+            mobileBtn.addEventListener('mouseenter', () => {
+                isHovering = true
+                customTimeInMilliSeconds = 100
+                navbarVisibility()
+            })
+            mobileBtn.addEventListener('mouseleave', () => {
+                isHovering = false
+                customTimeInMilliSeconds = 500
+                navbarVisibility()
+            })
+            navBar.addEventListener('mouseenter', () => {
+                isHovering = true
+                customTimeInMilliSeconds = 500
+                navbarVisibility()
+            })
+            navBar.addEventListener('mouseleave', () => {
+                isHovering = false
+                customTimeInMilliSeconds = 500
+                navbarVisibility()
+            })
+        </script>
+
+        <!-- https://preview.colorlib.com/theme/anipat/ -->
 
     </body>
 </html>
