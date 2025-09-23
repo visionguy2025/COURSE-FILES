@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Document</title>
+
+        <style>
+            .head {
+                position: absolute;
+                top: 100px;
+                left: 100px;
+                border-radius: 50%;
+                border: 2px solid black;
+                width: 400px;
+                height: 400px;
+            }
+            .eyeLeft {
+                rotate: -10deg;
+                width: 100px;
+                height: 150px;
+                border-radius: 50%;
+                border: 2px solid black;
+                overflow: hidden;
+                position: absolute;
+                top: 80px;
+                left: 15%;
+            }
+            .irisLeft {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                border: 2px solid black;
+                background-color: black;
+                position: absolute;
+                bottom: -20px;
+                scale: 0.7;
+            }
+            .eyeRight {
+                rotate: 10deg;
+                width: 100px;
+                height: 150px;
+                border-radius: 50%;
+                border: 2px solid black;
+                overflow: hidden;
+                position: absolute;
+                top: 80px;
+                right: 15%;
+            }
+            .irisRight {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                border: 2px solid black;
+                background-color: black;
+                position: absolute;
+                bottom: -20px;
+                scale: 0.7;
+            }
+            .mouth {
+                position: absolute;
+                left: 25%;
+                bottom: 50px;
+                border-radius: 50%;
+                border: none;
+                border-bottom: 4px solid black;
+                width: 200px;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="head">
+            <div class="eyeLeft">
+                <div class="irisLeft"></div>
+            </div>
+
+            <div class="eyeRight">
+                <div class="irisRight"></div>
+            </div>
+
+            <div class="mouth"></div>
+        </div>
+    </body>
+</html>

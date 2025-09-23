@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+.circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    animation-delay: 100ms;
+    animation-iteration-count: infinite;
+}
+.circleOuter {
+    top: 180px;
+    left: 540px;
+    
+    width: 300px;
+    height: 300px;
+    
+
+    border: 12px solid #000000;
+    border-bottom-color: #cccccc;
+    border-left-color: #888888;
+    border-top-color: #555555;
+
+    animation-name: spinLeft;
+}
+.circleInner {
+    position: absolute;
+    top: 230px;
+    left: 590px;
+    
+    width: 200px;
+    height: 200px;
+
+    border: 10px solid #550000;
+    border-bottom-color: #880000;
+    border-left-color: #cc0000;
+    border-top-color: #ff0000;
+
+    animation-name: spinLeft;
+    animation-direction: reverse;
+}
+
+.imagebox {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 305px;
+    left: 660px;
+    outline: hidden;
+    text-align: center;
+    scale: 1.5;
+    animation: lights 1000ms infinite;
+}
+.imagebox img {
+    background: transparent;
+    mix-blend-mode: multiply;
+    height: 100%;
+}
+
+@keyframes spinLeft {
+    0% {
+        rotate: 0deg;
+    }
+    50% {
+        rotate: 180deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+
+@keyframes lights {
+    0% {
+        box-shadow: 0 0 60px red;
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        box-shadow: 0 0 20px red;
+        filter: hue-rotate(180deg);
+    }
+    100% {
+        box-shadow: 0 0 60px red;
+        filter: hue-rotate(360deg);
+    }
+}
