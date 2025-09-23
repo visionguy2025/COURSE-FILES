@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- TITLE -->
-        <title> Colorlib • Photosen | Home </title>
+        <title> Colorlib • Photosen | Contact </title>
 
         <!-- GOOGLE FONTS | JOSEFIN SANS -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,11 +16,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
         <!-- EXTERNAL CUSTOM STYLE SHEETS -->
-        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="../styles.css">
 
         <!-- INTERNAL CSS -->
         <style>
-            .headerNavbar > ul > li:first-of-type > a {
+            .headerNavbar > ul > li:nth-of-type(5) > a {
                 color: var(--default__theme_color);
             }
         </style>
@@ -39,10 +39,10 @@
             <nav class="headerNavbar">
                 <ul>
                     <li>
-                        <a href="#"> Home </a>
+                        <a href="../index.html"> Home </a>
                     </li>
                     <li id="gallery__li">
-                        <a href="./routes/gallery.html"> Gallery <i class="fa-solid fa-chevron-down"></i> </a>
+                        <a href="./gallery.html"> Gallery <i class="fa-solid fa-chevron-down"></i> </a>
 
                         <div id="gallery__dropdown">
                             <ul>
@@ -83,13 +83,13 @@
                         </div>
                     </li>
                     <li>
-                        <a href="./routes/services.html"> Services </a>
+                        <a href="./services.html"> Services </a>
                     </li>
                     <li>
-                        <a href="./routes/about.html"> About </a>
+                        <a href="./about.html"> About </a>
                     </li>
                     <li>
-                        <a href="./routes/contact.html"> Contact </a>
+                        <a href="#"> Contact </a>
                     </li>
                 </ul>
             </nav>
@@ -122,7 +122,66 @@
         <!-- MAIN -->
         <main>
             <section>
-                <!-- JS -->
+                <h3> Contact</h3>
+
+                <div class="containerContact">
+                    <div class="formBlock">
+                        <form action="#" method="post">
+                            <div>
+                                <label for="contact_name"> First Name 
+                                    <br>
+                                    <input type="text" id="contact_name" required>
+                                </label>
+    
+                                <label for="contact_lastname"> Last Name 
+                                    <br>
+                                    <input type="text" id="contact_lastname" required>
+                                </label>
+                            </div>
+
+                            <br> <br>
+
+                            <label for="contact_email"> Email </label> <br>
+                            <input type="email" id="contact_email" required>
+
+                            <br> <br>
+
+                            <label for="contact_subject"> Subject </label> <br>
+                            <input type="text" id="contact_subject" required>
+
+                            <br> <br>
+
+                            <label for="contact_message"> Message </label> <br>
+                            <textarea 
+                            name="contact_message" 
+                            id="contact_message" 
+                            placeholder="Write your notes or questions here..."
+                            ></textarea>
+
+                            <br> <br>
+
+                            <button type="submit"> Send Message </button>
+                        </form>
+                    </div>
+                    <div class="infoBlock">
+                        <div>
+                            <h4> Address </h4>
+                            <p>
+                                203 Fake St. Mountain View, San Francisco, California, USA
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4> Phone </h4>
+                            <a href="#"> +1 232 3235 324 </a>
+                        </div>
+
+                        <div>
+                            <h4> Email Address </h4>
+                            <a href="#"> youremail@domain.com </a>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
 
@@ -134,38 +193,7 @@
         </footer>
         
         <!-- INTERNAL JAVASCRIPT -->
-        <script>
-            const HOMEPAGE_DATABASE = [
-                ['Nature', './assets/img_1.jpg.webp'], // 1
-                ['Portrait', './assets/img_2.jpg.webp'], // 2
-                ['People', './assets/img_3.jpg.webp'], // 3
-                ['Architecture', './assets/img_4.jpg.webp'], // 4
-                ['Animals', './assets/img_5.jpg.webp'], // 5
-                ['Sports', './assets/img_6.jpg.webp'], // 6
-                ['Travels', './assets/img_7.jpg.webp'], // 7
-                ['People', './assets/img_3.jpg.webp'], // 8
-                ['Architecture', './assets/img_4.jpg.webp'] // 9
-            ]
-
-            const homepageContainer = document.querySelector('main > section')
-            const allHomeCards = ''
-
-            HOMEPAGE_DATABASE.forEach(
-                (element, index) => {
-                    const homepageCard = `
-                        <div class="galleryCard" id="galleryCard_${index}">
-                            <img src="${element[1]}" alt="image">
-        
-                            <div>
-                                <h3> ${element[0]} </h3>
-                                <a href="./routes/gallery.html"><button> MORE PHOTOS </button></a>
-                            </div>
-                        </div>
-                    `
-                    homepageContainer.innerHTML += homepageCard
-                }
-            )
-        </script>
+        <script></script>
 
         <!-- https://preview.colorlib.com/theme/photosen/ -->
     </body>

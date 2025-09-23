@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- TITLE -->
-        <title> Colorlib • Photosen | Home </title>
+        <title> Colorlib • Photosen | Services </title>
 
         <!-- GOOGLE FONTS | JOSEFIN SANS -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,11 +16,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
         <!-- EXTERNAL CUSTOM STYLE SHEETS -->
-        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="../styles.css">
 
         <!-- INTERNAL CSS -->
         <style>
-            .headerNavbar > ul > li:first-of-type > a {
+            .headerNavbar > ul > li:nth-of-type(3) > a {
                 color: var(--default__theme_color);
             }
         </style>
@@ -39,10 +39,10 @@
             <nav class="headerNavbar">
                 <ul>
                     <li>
-                        <a href="#"> Home </a>
+                        <a href="../index.html"> Home </a>
                     </li>
                     <li id="gallery__li">
-                        <a href="./routes/gallery.html"> Gallery <i class="fa-solid fa-chevron-down"></i> </a>
+                        <a href="./gallery.html"> Gallery <i class="fa-solid fa-chevron-down"></i> </a>
 
                         <div id="gallery__dropdown">
                             <ul>
@@ -83,13 +83,13 @@
                         </div>
                     </li>
                     <li>
-                        <a href="./routes/services.html"> Services </a>
+                        <a href="#"> Services </a>
                     </li>
                     <li>
-                        <a href="./routes/about.html"> About </a>
+                        <a href="./about.html"> About </a>
                     </li>
                     <li>
-                        <a href="./routes/contact.html"> Contact </a>
+                        <a href="./contact.html"> Contact </a>
                     </li>
                 </ul>
             </nav>
@@ -122,7 +122,70 @@
         <!-- MAIN -->
         <main>
             <section>
-                <!-- JS -->
+                <h3> My Services </h3>
+
+                <div class="servicesContainer">
+                    <div class="serviceCard">
+                        <div>
+                            <i class="fa-solid fa-camera-retro"></i>
+                        </div>
+                        <h4> Camera </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.
+                        </p>
+                        <strong> $29 </strong>
+                    </div>
+                    <div class="serviceCard">
+                        <div>
+                            <i class="fa-solid fa-image"></i>
+                        </div>
+                        <h4> Wedding Photography </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.
+                        </p>
+                        <strong> $46 </strong>
+                    </div>
+                    <div class="serviceCard">
+                        <div>
+                            <i class="fa-solid fa-paw"></i>
+                        </div>
+                        <h4> Animal </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.
+                        </p>
+                        <strong> $24 </strong>
+                    </div>
+                    <div class="serviceCard">
+                        <div>
+                            <i class="fa-solid fa-panorama"></i>
+                        </div>
+                        <h4> Portrait </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.
+                        </p>
+                        <strong> $40 </strong>
+                    </div>
+                    <div class="serviceCard">
+                        <div>
+                            <i class="fa-solid fa-monument"></i>
+                        </div>
+                        <h4> Travel </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.
+                        </p>
+                        <strong> $35 </strong>
+                    </div>
+                    <div class="serviceCard">
+                        <div>
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <h4> Video Editing </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.
+                        </p>
+                        <strong> $15 </strong>
+                    </div>
+                </div>
             </section>
         </main>
 
@@ -134,38 +197,7 @@
         </footer>
         
         <!-- INTERNAL JAVASCRIPT -->
-        <script>
-            const HOMEPAGE_DATABASE = [
-                ['Nature', './assets/img_1.jpg.webp'], // 1
-                ['Portrait', './assets/img_2.jpg.webp'], // 2
-                ['People', './assets/img_3.jpg.webp'], // 3
-                ['Architecture', './assets/img_4.jpg.webp'], // 4
-                ['Animals', './assets/img_5.jpg.webp'], // 5
-                ['Sports', './assets/img_6.jpg.webp'], // 6
-                ['Travels', './assets/img_7.jpg.webp'], // 7
-                ['People', './assets/img_3.jpg.webp'], // 8
-                ['Architecture', './assets/img_4.jpg.webp'] // 9
-            ]
-
-            const homepageContainer = document.querySelector('main > section')
-            const allHomeCards = ''
-
-            HOMEPAGE_DATABASE.forEach(
-                (element, index) => {
-                    const homepageCard = `
-                        <div class="galleryCard" id="galleryCard_${index}">
-                            <img src="${element[1]}" alt="image">
-        
-                            <div>
-                                <h3> ${element[0]} </h3>
-                                <a href="./routes/gallery.html"><button> MORE PHOTOS </button></a>
-                            </div>
-                        </div>
-                    `
-                    homepageContainer.innerHTML += homepageCard
-                }
-            )
-        </script>
+        <!-- <script></script> -->
 
         <!-- https://preview.colorlib.com/theme/photosen/ -->
     </body>
