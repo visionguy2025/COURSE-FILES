@@ -1,0 +1,37 @@
+:root {
+    --default_textColor: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.sm-box {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+.md-box {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.lg-box {
+    grid-column: span 3;
+    grid-row: span 3;
+}
+
+.primary {
+    background-color: #1199bb;
+}
+.danger {
+    background-color: #dd2211;
+}
+.warning {
+    background-color: #ff9900;
+}
+.verified {
+    background-color: #22bb22;
+}
