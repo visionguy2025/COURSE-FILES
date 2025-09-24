@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container {
+    margin: 50px 0 0 250px;
+    width: 300px;
+    height: 510px;
+    box-shadow: 0 0 2px #000000;
+
+    display: grid;
+    grid-template-columns: repeat(30, 10px);
+    grid-template-rows: repeat(51, 10px);
+}
+
+.box {
+    background-color: #000000; /* default */
+}
