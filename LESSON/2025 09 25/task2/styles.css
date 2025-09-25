@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: crimson;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+header > div {
+    height: 100%;
+    border: 1px solid black;
+}
+header > div a {
+    height: 100%;
+}
+header > div a img {
+    height: 100%;
+}
+header > nav {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+header > nav > ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+header > nav > ul > li:hover > a {
+    color: black;
+    text-shadow: 0 0 5px yellow, 0 0 10px yellow;
+    transition: 0.2s ease-out;
+}
+header > nav > ul > li a {
+    color: white;
+}
+header > nav > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(1fr, 2fr));
+    grid-template-rows: repeat(2, minmax(1fr, 2fr));
+    grid-template-areas: 
+        "section1 section1"
+        "section2 section2"
+    ;
+}
+main > section:first-of-type {
+    padding: 1%;
+    gap: 1%;
+    background-color: lime;
+    grid-area: section1;
+    display: flex;
+}
+main > section:first-of-type > div:first-of-type {
+    width: 50%;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+main > section:first-of-type > div:first-of-type h2 {
+    border-bottom: 2px solid black;
+}
+main > section:first-of-type > div:first-of-type p {
+    width: 80%;
+    text-align: center;
+}
+main > section:first-of-type > div:first-of-type button {
+    margin: 0 5px;
+}
+.btn {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: #000;
+    color: #fff;
+    filter: invert(0);
+    transition: 150ms linear;
+}
+.btn:hover {
+    filter: invert(1);
+}
+main > section:first-of-type > div:last-of-type {
+    width: 50%;
+    background-color: orangered;
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main > section:first-of-type > div:last-of-type img {
+    width: 100%;
+    border-radius: 10px;
+}
+main > section:last-of-type {
+    padding: 1%;
+    gap: 1%;
+    background-color: lime;
+    grid-area: section2;
+    display: flex;
+}
+main > section:last-of-type > div:first-of-type {
+    width: 50%;
+    background-color: blueviolet;
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main > section:last-of-type > div:first-of-type img {
+    width: 100%;
+    border-radius: 10px;
+}
+main > section:last-of-type > div:last-of-type {
+    width: 50%;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+main > section:last-of-type > div:last-of-type form {
+    text-shadow: 0 0 2px black;
+}
+main > section:last-of-type > div:last-of-type form label {
+    border-bottom: 1px solid black;
+}
+main > section:last-of-type > div:last-of-type form input:not([type='radio']) {
+    width: 300px;
+    height: 40px;
+    outline: none;
+    border: 1px solid black;
+    margin-top: 20px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: 150ms ease-in-out;
+}
+main > section:last-of-type > div:last-of-type form input[type='radio'] {
+    accent-color: crimson;
+}
+main > section:last-of-type > div:last-of-type form textarea {
+    width: 300px;
+    height: 40px;
+    outline: none;
+    border: 1px solid black;
+    margin-top: 2px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: 150ms ease-in-out;
+}
+main form input:focus, main form textarea:focus {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+main > section:last-of-type > div:last-of-type form button {
+    margin: 0 5px;
+}

@@ -5,8 +5,25 @@
 }
 /* ================================ CUSTOM VARIABLES •• END ================================ */
 
+#scrolltop {}
+
 /* ================================ HEADER •• START ================================ */
 header {}
+header > div:first-of-type {}
+header > div:first-of-type a {}
+header > div:first-of-type a img {}
+header > nav {}
+header > nav > ul {}
+header > nav > ul > li {}
+header > nav > ul li i {}
+#pages__element {}
+#dropdown__element {}
+#dropdown__element li {}
+#pages__dropdown {}
+#dropdown__dropdown {}
+#dropdown__dropdown li {}
+header > div:last-of-type {}
+header > div:last-of-type i {}
 /* ================================ HEADER •• END ================================ */
 
 /* ================================ MAIN •• START ================================ */
@@ -17,9 +34,21 @@ main {}
 .home {}
 
 /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */ /* ABOUT */
-.about {}
+.gallery {}
+
+/* CONTACT */ /* CONTACT */ /* CONTACT */ /* CONTACT */ /* CONTACT */ /* CONTACT */ /* CONTACT */
+.contact {}
 /* ================================ MAIN •• END ================================ */
 
 /* ================================ FOOTER •• START ================================ */
 footer {}
+footer > span {}
+footer > span i {}
+footer > span a {}
+footer > div:first-of-type {}
+footer > div:first-of-type a {}
+footer > div:first-of-type a img {}
+footer > div:last-of-type {}
+footer > div:last-of-type a {}
+footer > div:last-of-type a i {}
 /* ================================ FOOTER •• END ================================ */

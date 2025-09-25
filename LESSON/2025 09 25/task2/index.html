@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ◄ ■ ► </title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <header>
+        <div>
+            <a href="#">
+                <img src="./logo.png" alt="logo">
+            </a>
+        </div>
+
+        <nav>
+            <ul>
+                <li> <a href="#">Home</a> </li>
+                <li> <a href="#">Pages</a> </li>
+                <li> <a href="#">Blog</a> </li>
+                <li> <a href="#">About</a> </li>
+                <li> <a href="#">Contact</a> </li>
+            </ul>
+
+            <div>
+                ?
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <h2> Header 1 </h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio?
+                </p>
+                <button class="btn"> About Us </button>
+            </div>
+            <div>
+                <img src="./img1.png" alt="image">
+            </div>
+        </section>
+        <section>
+            <div>
+                <img src="./img2.png" alt="image">
+            </div>
+            <div>
+                <form>
+                    <label for="">Full Name:</label> <br>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name">
+                    <br> <br>
+                    <label for="">Email:</label> <br>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <br> <br>
+                    <label for="">Number:</label> <br>
+                    <input type="number" id="number" name="number" placeholder="Enter your phone number">
+                    <br> <br>
+                    <label for="password">Password:</label> <br>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                    <br> <br>
+                    <span>Gender:</span> <br>
+                    <input type="radio" id="male" value="male" name="gender" checked>
+                    <label for="male">Male</label>
+                    <br>
+                    <input type="radio" id="female" value="female" name="gender">
+                    <label for="female">Female</label>
+                    <br> <br>
+                    <label for="message">Message:</label> <br>
+                    <textarea name="message" id="message" placeholder="Your message"></textarea>
+                    <br> <br>
+                    <span>
+                        <button type="reset" class="btn"> Reset </button>
+                        <button type="submit" onclick="submitForm()" class="btn"> Submit </button>
+                    </span>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const submitForm = () => {
+            const currentURL = new URL(window.location.href)
+            const params_name = currentURL.searchParams.get('name')
+            const params_email = currentURL.searchParams.get('email')
+            const params_number = currentURL.searchParams.get('number')
+            const params_password = currentURL.searchParams.get('password')
+            const params_gender = currentURL.searchParams.get('gender')
+            const params_message = currentURL.searchParams.get('message')
+            const queryParameters = {
+                name: params_name,
+                email: params_email,
+                number: params_number,
+                password: params_password,
+                gender: params_gender,
+                message: params_message,
+            }
+            console.log(
+                queryParameters
+            )
+        }
+    </script>
+    
+</body>
+</html>
