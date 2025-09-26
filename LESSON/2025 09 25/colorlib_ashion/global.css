@@ -1,0 +1,40 @@
+/* ===================================== GLOBAL •• START ===================================== */
+/* CUSTOM VALUES */
+:root {
+    --color__theme: #ca1515;
+
+    --transition__fast: 150ms linear;
+    --transition__slow: 350ms ease-in-out;
+}
+
+/* PAGE SETUP DEFAULTS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* COOKIE FONT */
+.font-cookie {
+    font-family: "Cookie", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ANIMATIONS */
+@keyframes dropdownShowingUp {
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+/* ===================================== GLOBAL •• END ===================================== */
