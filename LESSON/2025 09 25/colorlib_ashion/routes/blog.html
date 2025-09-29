@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TITLE OF THE PAGE -->
+    <title> Ashion • Blog </title>
+    
+    <!-- GOOGLE FONTS | COOKIE, MONTSERRAT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- CUSTOM STYLE SHEETS -->
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./blog.css">
+
+    <!-- RESPONSIVENESS -->
+    <link rel="stylesheet" media="(max-width: 1280px)" href="../styles_laptop.css">
+    <link rel="stylesheet" media="(max-width: 991px)" href="../styles_tablet.css">
+    <link rel="stylesheet" media="(max-width: 478px)" href="../styles_mobile.css">
+</head>
+<body>
+
+    <!-- SEARCH MODAL -->
+    <div id="searchModal">
+        <button onclick="searchModalClose()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <form>
+            <input type="search" name="search_modal_in" id="search_modal_in" placeholder="Search here.....">
+        </form>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div>
+            <img src="./assets/logo.png.webp" alt="logo">
+        </div>
+
+        <button id="headerNavBtn" onclick="mobileHeaderOpen()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul>
+            <li>
+                <a href="../index.html"> Home </a>
+            </li>
+            <li>
+                <a href="#"> Women’s </a>
+            </li>
+            <li>
+                <a href="#"> Men’s </a>
+            </li>
+            <li>
+                <a href="./shop.html"> Shop </a>
+            </li>
+            <li id="pages__menu">
+                <a href="#"> Pages </a>
+
+                <ul id="pages__dropdown">
+                    <li>
+                        <a href="./product_details.html"> Product Details </a>
+                    </li>
+                    <li>
+                        <a href="./shop_cart.html"> Shop Cart </a>
+                    </li>
+                    <li>
+                        <a href="./checkout.html"> Checkout </a>
+                    </li>
+                    <li>
+                        <a href="./blog_details.html"> Blog Details </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"> Blog </a>
+            </li>
+            <li>
+                <a href="./contact.html"> Contact </a>
+            </li>
+        </ul>
+
+        <div>
+            <span>
+                <a href="#">
+                    Login / Register
+                </a>
+            </span>
+
+            <div>
+                <button onclick="searchModalOpen()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button>
+                    <a href="#">
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+
+                    <div id="counter__fav">2</div>
+                </button>
+                <button>
+                    <a href="./shop_cart.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+
+                    <div id="counter__cart">2</div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE HEADER -->
+    <div id="headerOverlay" onclick="mobileHeaderClose()"></div>
+    <div id="mobileHeader">
+        <button id="headerCloseBtn" onclick="mobileHeaderClose()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div>
+            <button onclick="searchModalOpen()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button>
+                <a href="#">
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+
+                <div id="counter__fav">2</div>
+            </button>
+            <button>
+                <a href="./shop_cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+
+                <div id="counter__cart">2</div>
+            </button>
+        </div>
+        <div>
+            <img src="./assets/logo.png.webp" alt="logo">
+        </div>
+        <nav>
+            <button onclick="mobileNavMenuShowToggle()">
+                MENU
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">Women's</a></li>
+                <li><a href="#">Men's</a></li>
+                <li><a href="./shop.html">Shop</a></li>
+                <li>
+                    <span onclick="mobileNavMenuExtendSubToggle()">
+                        Pages <span>►</span>
+                    </span>
+
+                    <ul>
+                        <li><a href="./product_details.html">Product Details</a></li>
+                        <li><a href="./shop_cart.html">Shop Cart</a></li>
+                        <li><a href="./checkout.html">Checkout</a></li>
+                        <li><a href="./blog_details.html">Blog Details</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div>
+            <a href="#">
+                Login / Register
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN -->
+    <main></main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="../assets/logo.png.webp" alt="logo">
+                    </a>
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt cilisis.
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../assets/payment-1.png.webp" alt="master">
+                    </a>
+                    <a href="#">
+                        <img src="../assets/payment-2.png.webp" alt="visa">
+                    </a>
+                    <a href="#">
+                        <img src="../assets/payment-3.png.webp" alt="discover">
+                    </a>
+                    <a href="#">
+                        <img src="../assets/payment-4.png.webp" alt="paypal">
+                    </a>
+                    <a href="#">
+                        <img src="../assets/payment-5.png.webp" alt="cirrus">
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <h3> Quick links </h3>
+
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Blogs</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
+            </ul>
+            <ul>
+                <h3> Account </h3>
+
+                <li>
+                    <a href="#">My Account</a>
+                </li>
+                <li>
+                    <a href="#">Orders Tracking</a>
+                </li>
+                <li>
+                    <a href="#">Checkout</a>
+                </li>
+                <li>
+                    <a href="#">Wishlist</a>
+                </li>
+            </ul>
+            <ul>
+                <h3> NEWSLETTER </h3>
+
+                <form>
+                    <input type="search" placeholder="Email">
+                    <button type="submit"> SUBSCRIBE </button>
+                </form>
+
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            Copyright © 2025 All rights reserved | This template is made with <i class="fa-solid fa-heart"></i> by <a href="https://colorlib.com/">Colorlib</a>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS | EXTERNAL JAVASCRIPT -->
+    <script>
+        const mobileHeaderOpen = () => {
+            document.getElementById('headerOverlay').style.display = `block`
+            document.getElementById('mobileHeader').style.display = `block`
+        }
+        const mobileHeaderClose = () => {
+            document.getElementById('headerOverlay').style.display = `none`
+            document.getElementById('mobileHeader').style.display = `none`
+        }
+
+        const mobileNavMenuShowToggle = () => {
+            const mobileNav = document.querySelector('#mobileHeader > nav > ul')
+
+            if(mobileNav.style.height != `fit-content` && mobileNav.style.padding != `10px 30px`) {
+                mobileNav.style.height = `fit-content`
+                mobileNav.style.padding = `10px 30px`
+            } else {
+                mobileNav.style.height = `0`
+                mobileNav.style.padding = `0`
+            }
+            document.querySelector('#mobileHeader > nav > ul')
+        }
+        const mobileNavMenuExtendSubToggle = () => {
+            const mobileNavMenu = document.querySelector('#mobileHeader > nav > ul > li > ul')
+            const chevronIcon = document.querySelector('#mobileHeader > nav > ul > li > span > span')
+
+            if(mobileNavMenu.style.height != `fit-content` && mobileNavMenu.style.padding != `10px 30px`) {
+                mobileNavMenu.style.height = `fit-content`
+                mobileNavMenu.style.padding = `10px 30px`
+                chevronIcon.style.transform = `rotate(90deg)`
+            } else {
+                mobileNavMenu.style.height = `0`
+                mobileNavMenu.style.padding = `0`
+                chevronIcon.style.transform = `rotate(0deg)`
+            }
+        }
+
+        const searchModalOpen = () => {
+            document.getElementById('searchModal').style.display = `block`
+        }
+        const searchModalClose = () => {
+            document.getElementById('searchModal').style.display = `none`
+        }
+    </script>
+
+</body>
+</html>

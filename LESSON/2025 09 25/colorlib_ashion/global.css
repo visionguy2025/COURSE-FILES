@@ -4,6 +4,7 @@
     --color__theme: #ca1515;
 
     --transition__fast: 150ms linear;
+    --transition__mid: 0.25s ease-in-out;
     --transition__slow: 350ms ease-in-out;
 }
 
@@ -21,6 +22,20 @@
     font-style: normal;
 }
 
+/* THEME UNDERLINES */
+.underlined::after {
+    z-index: 9;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: calc(100% + 2px);
+    border-radius: 50%;
+    display: flex;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color__theme);
+}
+
 /* COOKIE FONT */
 .font-cookie {
     font-family: "Cookie", cursive;
@@ -35,6 +50,24 @@
     }
     100% {
         transform: translateY(0px);
+    }
+}
+@keyframes popUpProductButtons {
+    0% {
+        bottom: -50px;
+        opacity: 0%;
+    }
+    100% {
+        bottom: 0px;
+        opacity: 100%;
+    }
+}
+@keyframes galleryInsta {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
     }
 }
 /* ===================================== GLOBAL •• END ===================================== */

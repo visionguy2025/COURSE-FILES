@@ -1,0 +1,96 @@
+/* ===================================== HEADER •• START ===================================== */
+/* HEADER */
+header {
+    padding: 0 1%;
+}
+
+/* HEADER NAVBAR */
+header > ul {
+    width: calc(100%/2);
+}
+
+/* HEADER BUTTONS */
+header > div:last-of-type {
+    gap: 20px;
+}
+/* ===================================== HEADER •• END ===================================== */
+
+
+
+
+
+/* ===================================== MAIN •• START ===================================== */
+/* HOME */
+.homeCard > div {
+    left: 5%;
+}
+
+/* NEW PRODUCT */
+.new_product {
+    width: 950px;
+}
+.newProductCard > div:first-of-type {
+    position: relative;
+    height: 80%;
+}
+.newProductCard > div:first-of-type > img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: 100%;
+}
+
+/* CATEGORIES */
+.categories {
+    width: 990px;
+}
+.categories__columns h4 {
+    font-size: 1.3rem;
+    font-weight: 550;
+    margin-bottom: 40px;
+}
+
+/* DISCOUNT */
+.discount {
+    width: 990px;
+}
+.discount__right--bottom > div:first-of-type b:not(:first-of-type) {
+    margin-left: 1%;
+}
+
+/* SERVICES */
+.services {
+    width: 990px;
+}
+.services > div > div {
+    margin-left: 10px;
+}
+/* ===================================== MAIN •• END ===================================== */
+
+
+
+
+
+/* ===================================== FOOTER •• START ===================================== */
+/* FOOTER COLUMNS */
+footer div:first-of-type {
+    width: 990px;
+}
+footer div:first-of-type > ul > form input {
+    width: 290px;
+}
+
+/* FOOTER COLUMN 1 */
+footer div:first-of-type > ul:nth-of-type(1) {
+    margin: 0 20px;
+}
+footer div:first-of-type > ul:nth-of-type(1) > li:nth-of-type(2) {
+    line-height: 20px;
+}
+
+/* FOOTER BOTTOM */
+footer div:last-of-type {
+    width: 990px;
+}
+/* ===================================== FOOTER •• END ===================================== */

@@ -1,0 +1,61 @@
+/* ===================================== HEADER •• START ===================================== */
+/* MOBILE HEADER */
+#mobileHeader {
+    width: 100%;
+}
+/* ===================================== HEADER •• END ===================================== */
+
+
+
+
+
+/* ===================================== MAIN •• START ===================================== */
+/* NEW PRODUCT */
+.new_product--top > ul {
+    flex-wrap: wrap;
+}
+.new_product--top > ul li {
+    margin-bottom: 10px;
+}
+
+/* COLLECTIONS */
+.collection_box h2 {
+    font-size: 3em;
+    text-align: center;
+}
+
+/* DISCOUNT */
+.discount {
+    width: 100%;
+    min-height: fit-content;
+}
+.discount__left {
+    width: 100%;
+    height: 200px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.discount__right--bottom {
+    min-height: fit-content;
+    padding: 0;
+}
+.discount__right--bottom > div:first-of-type b {
+    font-size: 1.5em;
+}
+/* ===================================== MAIN •• END ===================================== */
+
+
+
+
+
+/* ===================================== FOOTER •• START ===================================== */
+/* FOOTER COLUMNS */
+footer div:first-of-type > ul > form input {
+    width: 100%;
+}
+footer div:first-of-type > ul > form button {
+    position: relative;
+    top: 5px;
+    left: 73px;
+}
+/* ===================================== FOOTER •• END ===================================== */

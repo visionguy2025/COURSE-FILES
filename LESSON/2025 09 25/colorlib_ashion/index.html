@@ -22,10 +22,24 @@
 
     <!-- RESPONSIVENESS -->
     <link rel="stylesheet" media="(max-width: 1280px)" href="./styles_laptop.css">
-    <link rel="stylesheet" media="(max-width: 768px)" href="./styles_tablet.css">
-    <link rel="stylesheet" media="(max-width: 360px)" href="./styles_mobile.css">
+    <link rel="stylesheet" media="(max-width: 991px)" href="./styles_tablet.css">
+    <link rel="stylesheet" media="(max-width: 478px)" href="./styles_mobile.css">
 </head>
 <body>
+    
+    <!-- SEARCH MODAL -->
+    <div id="searchModal">
+        <button onclick="searchModalClose()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <form>
+            <input type="search" name="search_modal_in" id="search_modal_in" placeholder="Search here.....">
+        </form>
+    </div>
+
+    <!-- BIG SCREEN IMAGE -->
+    <div id="bigScreenImage" onclick="bigScreenImageShowClose()"></div>
 
     <!-- HEADER -->
     <header>
@@ -33,9 +47,13 @@
             <img src="./assets/logo.png.webp" alt="logo">
         </div>
 
+        <button id="headerNavBtn" onclick="mobileHeaderOpen()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
         <ul>
             <li>
-                <a href="#"> Home </a>
+                <a href="./index.html"> Home </a>
             </li>
             <li>
                 <a href="#"> Women’s </a>
@@ -51,16 +69,16 @@
 
                 <ul id="pages__dropdown">
                     <li>
-                        <a href="#"> Product Details </a>
+                        <a href="./routes/product_details.html"> Product Details </a>
                     </li>
                     <li>
-                        <a href="#"> Shop Cart </a>
+                        <a href="./routes/shop_cart.html"> Shop Cart </a>
                     </li>
                     <li>
-                        <a href="#"> Checkout </a>
+                        <a href="./routes/checkout.html"> Checkout </a>
                     </li>
                     <li>
-                        <a href="#"> Blog Details </a>
+                        <a href="./routes/blog_details.html"> Blog Details </a>
                     </li>
                 </ul>
             </li>
@@ -80,7 +98,7 @@
             </span>
 
             <div>
-                <button>
+                <button onclick="searchModalOpen()">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
                 <button>
@@ -91,7 +109,7 @@
                     <div id="counter__fav">2</div>
                 </button>
                 <button>
-                    <a href="#">
+                    <a href="./routes/shop_cart.html">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </a>
 
@@ -101,25 +119,159 @@
         </div>
     </header>
 
+    <!-- MOBILE HEADER -->
+    <div id="headerOverlay" onclick="mobileHeaderClose()"></div>
+    <div id="mobileHeader">
+        <button id="headerCloseBtn" onclick="mobileHeaderClose()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div>
+            <button onclick="searchModalOpen()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button>
+                <a href="#">
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+
+                <div id="counter__fav">2</div>
+            </button>
+            <button>
+                <a href="./routes/shop_cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+
+                <div id="counter__cart">2</div>
+            </button>
+        </div>
+        <div>
+            <img src="./assets/logo.png.webp" alt="logo">
+        </div>
+        <nav>
+            <button onclick="mobileNavMenuShowToggle()">
+                MENU
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">Women's</a></li>
+                <li><a href="#">Men's</a></li>
+                <li><a href="./routes/shop.html">Shop</a></li>
+                <li>
+                    <span onclick="mobileNavMenuExtendSubToggle()">
+                        Pages <span>►</span>
+                    </span>
+
+                    <ul>
+                        <li><a href="./routes/product_details.html">Product Details</a></li>
+                        <li><a href="./routes/shop_cart.html">Shop Cart</a></li>
+                        <li><a href="./routes/checkout.html">Checkout</a></li>
+                        <li><a href="./routes/blog_details.html">Blog Details</a></li>
+                    </ul>
+                </li>
+                <li><a href="./routes/blog.html">Blog</a></li>
+                <li><a href="./routes/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div>
+            <a href="#">
+                Login / Register
+            </a>
+        </div>
+    </div>
+
     <!-- MAIN -->
     <main>
         <!-- HOME -->
         <section class="home">
-            <div class="home__left"></div>
+            <div class="home__left homeCard">
+                <!-- <img src="./assets/category-1.jpg.webp" alt="image"> -->
+
+                <div>
+                    <h2 class="font-cookie">
+                        Women’s fashion
+                    </h2>
+                    <p>
+                        Sitamet, consectetur adipiscing elit, sed do eiusmod tempor incidid-
+                        <br>
+                        unt labore edolore magna aliquapendisse ultrices gravida.
+                    </p>
+                    <button class="underlined">
+                        shop now
+                    </button>
+                </div>
+            </div>
             <div class="home__right">
-                <div class="home__right--block"></div>
-                <div class="home__right--block"></div>
-                <div class="home__right--block"></div>
-                <div class="home__right--block"></div>
+                <div class="home__right--block homeCard hrHC_1">
+                    <!-- <img src="./assets/category-2.jpg.webp" alt="image"> -->
+
+                    <div>
+                        <h2>
+                            Men's fashion
+                        </h2>
+                        <p>
+                            358 items
+                        </p>
+                        <button class="underlined">
+                            shop now
+                        </button>
+                    </div>
+                </div>
+                <div class="home__right--block homeCard hrHC_2">
+                    <!-- <img src="./assets/category-3.jpg.webp" alt="image"> -->
+
+                    <div>
+                        <h2>
+                            Kid's fashion
+                        </h2>
+                        <p>
+                            273 items
+                        </p>
+                        <button class="underlined">
+                            shop now
+                        </button>
+                    </div>
+                </div>
+                <div class="home__right--block homeCard hrHC_3">
+                    <!-- <img src="./assets/category-4.jpg.webp" alt="image"> -->
+
+                    <div>
+                        <h2>
+                            Cosmetics
+                        </h2>
+                        <p>
+                            159 items
+                        </p>
+                        <button class="underlined">
+                            shop now
+                        </button>
+                    </div>
+                </div>
+                <div class="home__right--block homeCard hrHC_4">
+                    <!-- <img src="./assets/category-5.jpg.webp" alt="image"> -->
+
+                    <div>
+                        <h2>
+                            Accessories
+                        </h2>
+                        <p>
+                            792 items
+                        </p>
+                        <button class="underlined">
+                            shop now
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- NEW PRODUCT -->
         <section class="new_product">
             <div class="new_product--top">
-                <h2> New product </h2>
+                <h2 class="underlined"> New product </h2>
                 <ul>
-                    <li> All </li>
+                    <li class="underlined"> All </li>
                     <li> Women’s </li>
                     <li> Men’s </li>
                     <li> Kid’s </li>
@@ -128,50 +280,165 @@
                 </ul>
             </div>
             <div class="new_product--container">
-                <div class="newProductCard"></div>
-                <div class="newProductCard"></div>
-                <div class="newProductCard"></div>
-                <div class="newProductCard"></div>
-                <div class="newProductCard"></div>
-                <div class="newProductCard"></div>
-                <div class="newProductCard"></div>
-                <div class="newProductCard"></div>
+                <!-- JS -->
             </div>
-
-            <!-- <i class="fa-solid fa-star"></i> -->
-            <!-- <i class="fa-solid fa-star-half-stroke"></i> -->
-            <!-- <i class="fa-regular fa-star"></i> -->
         </section>
 
         <!-- COLLECTIONS -->
         <section class="collections">
-            <!--  -->
+            <div class="collection_box">
+                <p>The Chloe Collection</p>
+                <h2 class="font-cookie">The Project Jacket</h2>
+                <button class="underlined">SHOP NOW</button>
+                <div class="collection_box-buttons">
+                    <div class="radio_btn"></div>
+                    <div class="radio_btn"></div>
+                    <div class="radio_btn"></div>
+                </div>
+            </div>
         </section>
 
         <!-- CATEGORIES -->
         <section class="categories">
             <div class="categories__columns">
-                <h4>hot trend</h4>
+                <h4 class="underlined">hot trend</h4>
                 <div class="categories__columns--containers">
-                    <div class="categoryCard"></div>
-                    <div class="categoryCard"></div>
-                    <div class="categoryCard"></div>
+                    <div class="categoryCard">
+                        <img src="./assets/ht-1.jpg.webp" alt="image">
+                        <div>
+                            <h5>Chain bucket bag</h5>
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <strong>$ 59.0</strong>
+                        </div>
+                    </div>
+                    <div class="categoryCard">
+                        <img src="./assets/ht-2.jpg.webp" alt="image">
+                        <div>
+                            <h5>Pendant earrings</h5>
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <strong>$ 59.0</strong>
+                        </div>
+                    </div>
+                    <div class="categoryCard">
+                        <img src="./assets/ht-3.jpg.webp" alt="image">
+                        <div>
+                            <h5>Cotton T-Shirt</h5>
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <strong>$ 59.0</strong>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="categories__columns">
-                <h4>best seller</h4>
+                <h4 class="underlined">best seller</h4>
                 <div class="categories__columns--containers">
-                    <div class="categoryCard"></div>
-                    <div class="categoryCard"></div>
-                    <div class="categoryCard"></div>
+                    <div class="categoryCard">
+                        <img src="./assets/bs-1.jpg.webp" alt="image">
+                        <div>
+                            <h5>Cotton T-Shirt</h5>
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <strong>$ 59.0</strong>
+                        </div>
+                    </div>
+                    <div class="categoryCard">
+                        <img src="./assets/bs-2.jpg.webp" alt="image">
+                        <div>
+                            <h5>Zip-pockets pebbled tote briefcase</h5>
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <strong>$ 59.0</strong>
+                        </div>
+                    </div>
+                    <div class="categoryCard">
+                        <img src="./assets/bs-3.jpg.webp" alt="image">
+                        <div>
+                            <h5>Round leather bag</h5>
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <strong>$ 59.0</strong>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="categories__columns">
-                <h4>feature</h4>
+                <h4 class="underlined">feature</h4>
                 <div class="categories__columns--containers">
-                    <div class="categoryCard"></div>
-                    <div class="categoryCard"></div>
-                    <div class="categoryCard"></div>
+                    <div class="categoryCard">
+                        <img src="./assets/f-1.jpg.webp" alt="image">
+                        <div>
+                            <h5>Bow wrap skirt</h5>
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <strong>$ 59.0</strong>
+                        </div>
+                    </div>
+                    <div class="categoryCard">
+                        <img src="./assets/f-2.jpg.webp" alt="image">
+                        <div>
+                            <h5>Metallic earrings</h5>
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <strong>$ 59.0</strong>
+                        </div>
+                    </div>
+                    <div class="categoryCard">
+                        <img src="./assets/f-3.jpg.webp" alt="image">
+                        <div>
+                            <h5>Flap cross-body bag</h5>
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <strong>$ 59.0</strong>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -179,20 +446,120 @@
         <!-- DISCOUNT -->
         <section class="discount">
             <div class="discount__left"></div>
-            <div class="discount__right"></div>
+            <div class="discount__right">
+                <div class="discount__right--top">
+                    <div class="circleBG"></div>
+                    <div>
+                        <p>
+                            DISCOUNT
+                        </p>
+                        <h2 class="font-cookie">Summer 2019</h2>
+                        <h5>
+                            <span>Sale</span>
+                            50%
+                        </h5>
+                    </div>
+                </div>
+                <div class="discount__right--bottom">
+                    <div>
+                        <b>29</b>
+                        Day
+                        <b>07</b>
+                        Hour
+                        <b>35</b>
+                        Min
+                        <b>27</b>
+                        sec
+                    </div>
+                    <button class="underlined">
+                        SHOW NOW
+                    </button>
+                </div>
+            </div>
         </section>
 
         <!-- SERVICES -->
         <section class="services">
-            <!-- <i class="fa-solid fa-car"></i> -->
-            <!-- <i class="fa-regular fa-money-bill-1"></i> -->
-            <!-- <i class="fa-solid fa-life-ring"></i> -->
-            <!-- <i class="fa-solid fa-headset"></i> -->
+            <div>
+                <i class="fa-solid fa-car"></i>
+                <div>
+                    <h5>Free Shipping</h5>
+                    <p>For all oder over $99</p>
+                </div>
+            </div>
+            <div>
+                <i class="fa-regular fa-money-bill-1"></i>
+                <div>
+                    <h5>Money Back Guarantee</h5>
+                    <p>If good have Problems</p>
+                </div>
+            </div>
+            <div>
+                <i class="fa-solid fa-life-ring"></i>
+                <div>
+                    <h5>Online Support 24/7</h5>
+                    <p>Dedicated support</p>
+                </div>
+            </div>
+            <div>
+                <i class="fa-solid fa-headset"></i>
+                <div>
+                    <h5>Payment Secure</h5>
+                    <p>100% secure payment</p>
+                </div>
+            </div>
         </section>
         
         <!-- GALLERY -->
         <section class="gallery">
-            <!--  -->
+            <div>
+                <!-- <img src="./assets/insta-1.jpg.webp" alt="gallery"> -->
+
+                <div>
+                    <i class="fa-brands fa-instagram"></i>
+                    <p>@ ashion_shop</p>
+                </div>
+            </div>
+            <div>
+                <!-- <img src="./assets/insta-2.jpg.webp" alt="gallery"> -->
+
+                <div>
+                    <i class="fa-brands fa-instagram"></i>
+                    <p>@ ashion_shop</p>
+                </div>
+            </div>
+            <div>
+                <!-- <img src="./assets/insta-3.jpg.webp" alt="gallery"> -->
+
+                <div>
+                    <i class="fa-brands fa-instagram"></i>
+                    <p>@ ashion_shop</p>
+                </div>
+            </div>
+            <div>
+                <!-- <img src="./assets/insta-4.jpg.webp" alt="gallery"> -->
+
+                <div>
+                    <i class="fa-brands fa-instagram"></i>
+                    <p>@ ashion_shop</p>
+                </div>
+            </div>
+            <div>
+                <!-- <img src="./assets/insta-5.jpg.webp" alt="gallery"> -->
+
+                <div>
+                    <i class="fa-brands fa-instagram"></i>
+                    <p>@ ashion_shop</p>
+                </div>
+            </div>
+            <div>
+                <!-- <img src="./assets/insta-6.jpg.webp" alt="gallery"> -->
+
+                <div>
+                    <i class="fa-brands fa-instagram"></i>
+                    <p>@ ashion_shop</p>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -292,9 +659,233 @@
     </footer>
 
     <!-- SCRIPTS | EXTERNAL JAVASCRIPT -->
-    <!-- <script src="./scripts.js"></script> -->
+    <script>
+        const loadNewProducts = () => {
+            const FAKE_DATABASE = {
+                products: {
+                    cards: [
+                        {
+                            title: 'Buttons tweed blazer',
+                            status: 'NEW',
+                            price: 59,
+                            discount: false
+                        },
+                        {
+                            title: 'Flowy striped skirt',
+                            status: false,
+                            price: 49,
+                            discount: false
+                        },
+                        {
+                            title: 'Cotton T-Shirt',
+                            status: 'OUT OF STOCK',
+                            price: 59,
+                            discount: false
+                        },
+                        {
+                            title: 'Slim striped pocket shirt',
+                            status: false,
+                            price: 59,
+                            discount: false
+                        },
+                        {
+                            title: 'Fit micro corduroy shirt',
+                            status: false,
+                            price: 59,
+                            discount: false
+                        },
+                        {
+                            title: 'Tropical Kimono',
+                            status: 'SALE',
+                            price: 59,
+                            discount: 49
+                        },
+                        {
+                            title: 'Contrasting sunglasses',
+                            status: false,
+                            price: 59,
+                            discount: false
+                        },
+                        {
+                            title: 'Water resistant backpack',
+                            status: 'SALE',
+                            price: 59,
+                            discount: 49
+                        }
+                    ],
+                    new: [0],
+                    out_of_stock: [2],
+                    sale: [5, 7]
+                }
+            }
+            const productCardsContainer = document.querySelector('.new_product--container')
+            let allProductCards = ``
+            
+            FAKE_DATABASE.products.cards.forEach(
+                (data, index) => {
+                    let productImageID = index+1
+                    let productTitle = data.title
+                    let productPrice = data.price
+                    let productStatusVisibility
+                    let productStatusBackground
+                    let productStatus
+                    let productDiscount
+                    let originalPriceColor
+                    let originalPriceFontSize
+                    let originalPriceTextDecor
+    
+                    if(data.status == 'NEW') {
+                        productStatusVisibility = `visible`
+                        productStatusBackground = `#00dd00`
+                        productStatus = data.status
+                    } else if(data.status == 'OUT OF STOCK') {
+                        productStatusVisibility = `visible`
+                        productStatusBackground = `#000000`
+                        productStatus = data.status
+                    } else if(data.status == 'SALE') {
+                        productStatusVisibility = `visible`
+                        productStatusBackground = `#cc0000`
+                        productStatus = data.status
+                    } else {
+                        productStatusVisibility = `hidden`
+                        productStatusBackground = `transparent`
+                        productStatus = ''
+                    }
+                    
+                    if(data.discount) {
+                        originalPriceColor = `#b1b0b0`
+                        originalPriceFontSize = `0.9em`
+                        originalPriceTextDecor = `line-through`
+                        productDiscount = `
+                            <span>
+                                <strong style="
+                                color: #ca1515; font-size: 1.1em; text-decoration: none;
+                            ">
+                                    $ ${data.discount}.0
+                                </strong>
+                            </span>
+                        `
+                    } else {
+                        originalPriceColor = `#000000`
+                        originalPriceFontSize = `1em`
+                        originalPriceTextDecor = `none`
+                        productDiscount = ``
+                    }
+    
+                    var newProductCard = `
+                        <div class="newProductCard">
+                            <div>
+                                <img src="./assets/product-${productImageID}.jpg.webp" alt="product_image" id="newProductCard_${productImageID}">
+    
+                                <div class="product_status" style="
+                                    visibility: ${productStatusVisibility};
+                                    background-color: ${productStatusBackground};
+                                ">${productStatus}</div>
+    
+                                <div class="product_optionsMenu">
+                                    <button onclick="bigScreenImageShowOpen(newProductCard_${productImageID})">
+                                        <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                                    </button>
+                                    <button>
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                    <button>
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div>
+                                <p>
+                                    Buttons tweed blazer
+                                </p>
+                                <div>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                ${productDiscount}
+                                <span>
+                                    <strong style="
+                                        color: ${originalPriceColor};
+                                        font-size: ${originalPriceFontSize};
+                                        text-decoration: ${originalPriceTextDecor};
+                                    ">
+                                        $ ${productPrice}.0
+                                    </strong>
+                                </span>
+                            </div>
+                        </div>
+                    `
+    
+                    allProductCards += newProductCard
+                }
+            )
+    
+            productCardsContainer.innerHTML = allProductCards
+        }
+
+        const mobileHeaderOpen = () => {
+            document.getElementById('headerOverlay').style.display = `block`
+            document.getElementById('mobileHeader').style.display = `block`
+        }
+        const mobileHeaderClose = () => {
+            document.getElementById('headerOverlay').style.display = `none`
+            document.getElementById('mobileHeader').style.display = `none`
+        }
+
+        const mobileNavMenuShowToggle = () => {
+            const mobileNav = document.querySelector('#mobileHeader > nav > ul')
+
+            if(mobileNav.style.height != `fit-content` && mobileNav.style.padding != `10px 30px`) {
+                mobileNav.style.height = `fit-content`
+                mobileNav.style.padding = `10px 30px`
+            } else {
+                mobileNav.style.height = `0`
+                mobileNav.style.padding = `0`
+            }
+            document.querySelector('#mobileHeader > nav > ul')
+        }
+        const mobileNavMenuExtendSubToggle = () => {
+            const mobileNavMenu = document.querySelector('#mobileHeader > nav > ul > li > ul')
+            const chevronIcon = document.querySelector('#mobileHeader > nav > ul > li > span > span')
+
+            if(mobileNavMenu.style.height != `fit-content` && mobileNavMenu.style.padding != `10px 30px`) {
+                mobileNavMenu.style.height = `fit-content`
+                mobileNavMenu.style.padding = `10px 30px`
+                chevronIcon.style.transform = `rotate(90deg)`
+            } else {
+                mobileNavMenu.style.height = `0`
+                mobileNavMenu.style.padding = `0`
+                chevronIcon.style.transform = `rotate(0deg)`
+            }
+        }
+
+        const bigScreenImageShowOpen = (element) => {
+            const image_path = element.src
+            document.getElementById('bigScreenImage').innerHTML = `
+                <img src="${image_path}" alt="full_screen_image" title="Product image">
+            `
+            document.getElementById('bigScreenImage').style.display = `flex`
+        }
+        const bigScreenImageShowClose = () => {
+            document.getElementById('bigScreenImage').innerHTML = ``
+            document.getElementById('bigScreenImage').style.display = `none`
+        }
+
+        const searchModalOpen = () => {
+            document.getElementById('searchModal').style.display = `block`
+        }
+        const searchModalClose = () => {
+            document.getElementById('searchModal').style.display = `none`
+        }
+
+        window.addEventListener('DOMContentLoaded', loadNewProducts)
+    </script>
 
     <!-- https://preview.colorlib.com/theme/ashion/ -->
+    
     <!-- https://preview.colorlib.com/?_gl=1*1oo60iw*_ga*MTUxNTU0MTUzNi4xNzU4MTExMzUy*_ga_SEKJ4E9T4H*czE3NTg3OTk0MDgkbzgkZzEkdDE3NTg3OTk1MzUkajYwJGwwJGgw#ashion -->
     
 </body>
