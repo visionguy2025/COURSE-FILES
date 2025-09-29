@@ -1,2 +1,14 @@
 /* MAIN */
 main {}
+
+/* UNTITLED */
+.untitled {}
+
+/* RESPONSIVITY | LAPTOP */
+@media only screen and (max-width: 1280px) {}
+
+/* RESPONSIVITY | TABLET */
+@media only screen and (max-width: 991px) {}
+
+/* RESPONSIVITY | MOBILE */
+@media only screen and (max-width: 478px) {}
