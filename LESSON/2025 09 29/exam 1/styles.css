@@ -1,3 +1,8 @@
+/* ============================== GLOBAL • START ============================== */
+:root {
+    --transition_fast: 0.15s ease-in-out;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,6 +12,13 @@
     font-family: sans-serif;
 }
 
+::selection {
+    background-color: #000000;
+    color: #ffffff;
+}
+/* ============================== GLOBAL • END ============================== */
+
+/* ============================== HEADER • START ============================== */
 /* HEADER */
 .header {
     display: flex;
@@ -82,6 +94,12 @@
     transition: 0.3s ease-in-out;
     transition-delay: 0.25s;
 }
+.menu_dropdown a {
+    color: #000000;
+}
+.menu_dropdown a:hover {
+    color: #407bff;
+}
 #menu_two {
     position: relative;
 }
@@ -89,7 +107,6 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-
 }
 .fa-chevron-right {
     align-self: center;
@@ -139,13 +156,16 @@
     color: #ffffff;
     border: none;
 }
+/* ============================== HEADER • END ============================== */
 
-/* MAIN */
+/* ============================== MAIN • START ============================== */
 main {
     width: 100%;
     overflow: hidden;
 }
+/* ============================== MAIN • END ============================== */
 
+/* ============================== HOME • START ============================== */
 /* MAIN | HOME SECTION */
 .home {
     width: 1170px;
@@ -193,6 +213,11 @@ main {
     background-color: #ffffff;
     border: 1px solid #407bff;
 }
+.home__left div button:last-of-type:hover {
+    color: #ffffff;
+    background-color: #407bff;
+    border: none;
+}
 .home__right {
     position: relative;
     width: 635px;
@@ -208,8 +233,98 @@ main {
     transform: translateX(-50%);
     left: calc(100% + 50px);
 }
+/* ============================== HOME • END ============================== */
 
-/* RESPONSIVITY */
+/* ============================== SERVICES • START ============================== */
+.services {
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+}
+.services__left {
+    width: 350px;
+}
+.services__left h5 {}
+.services__left h2 {}
+.services__left p {}
+.services__left ul {}
+.services__left ul li {}
+.services__left ul li i {}
+.services__left div {}
+.services__left div p {}
+.services__left div div:first-of-type {}
+.services__left div div:first-of-type img {}
+.services__left div div:last-of-type {}
+.services__left div div:last-of-type h6 {}
+.services__left div div:last-of-type p {}
+.services__right {
+    position: relative;
+    padding: 10px;
+    width: 635px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 25px #00000020;
+    overflow: hidden;
+}
+.services__right img {
+    width: 100%;
+    /* height: 96%; */
+}
+.services__right button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    background-color: #ffffff;
+    color: #407bff;
+    cursor: pointer;
+    box-shadow: 0px 15px 20px #00000075;
+}
+/* ============================== SERVICES • END ============================== */
+
+/* ============================== DASHBOARD • START ============================== */
+.dashboard {}
+/* ============================== DASHBOARD • END ============================== */
+
+/* ============================== INFO • START ============================== */
+.info {}
+/* ============================== INFO • END ============================== */
+
+/* ============================== PRICING • START ============================== */
+.pricing {}
+/* ============================== PRICING • END ============================== */
+
+/* ============================== ADVANTAGES • START ============================== */
+.advantages {}
+/* ============================== ADVANTAGES • END ============================== */
+
+/* ============================== FEEDBACK • START ============================== */
+.feedback {}
+/* ============================== FEEDBACK • END ============================== */
+
+/* ============================== ABOUT • START ============================== */
+.about {}
+/* ============================== ABOUT • END ============================== */
+
+/* ============================== NEWS • START ============================== */
+.news {}
+/* ============================== NEWS • END ============================== */
+
+/* ============================== CONTACT • START ============================== */
+.contact {}
+/* ============================== CONTACT • END ============================== */
+
+/* ============================== FOOTER • START ============================== */
+.footer {}
+/* ============================== FOOTER • END ============================== */
+
+/* ============================== RESPONSIVITY • START ============================== */
 @media only screen and (max-width: 1536px) {
     .headerContainer {
         width: 80%;
@@ -222,3 +337,4 @@ main {
         justify-content: space-between;
     }
 }
+/* ============================== RESPONSIVITY • END ============================== */
