@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TITLE OF THE PAGE -->
+    <title> task2 </title>
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- BOOTSTRAP CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">DBIM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BOOTSTRAP CAROUSEL -->
+    <main class="container">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="customCarouselItem">
+                        <article>
+                            <h2> Captain America: Winter Soldier </h2>
+                            <p> Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            <button type="button" class="btn btn-secondary"> Watch </button>
+                        </article>
+                        <div>
+                            <img src="./images/captain-america-the-winter-soldier-poster.avif" alt="image">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="customCarouselItem">
+                        <article>
+                            <h2> Black Adam </h2>
+                            <p> Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            <button type="button" class="btn btn-secondary"> Watch </button>
+                        </article>
+                        <div>
+                            <img src="./images/wallpapersden.com_dc-black-adam-hd-movie-poster_2880x1800.jpg" alt="image">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="customCarouselItem">
+                        <article>
+                            <h2> Edge of Tomorrow </h2>
+                            <p> Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            <button type="button" class="btn btn-secondary"> Watch </button>
+                        </article>
+                        <div>
+                            <img src="./images/MV5BODA5ODNiMjQtOTI4Ny00Y2UwLThkMjAtMGQ3NWExNzNiMTg3XkEyXkFqcGc@._V1_.jpg" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </main>
+
+    <!-- BOOTSTRAP SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- https://getbootstrap.com/docs/5.3/getting-started/introduction/ -->
+
+</body>
+</html>
