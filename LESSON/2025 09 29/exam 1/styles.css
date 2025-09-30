@@ -238,29 +238,76 @@ main {
 /* ============================== SERVICES • START ============================== */
 .services {
     width: 1170px;
-    margin: 0 auto;
+    margin: 164px auto 100px;
     display: flex;
+    justify-content: space-between;
 }
 .services__left {
     width: 350px;
 }
-.services__left h5 {}
-.services__left h2 {}
-.services__left p {}
-.services__left ul {}
-.services__left ul li {}
-.services__left ul li i {}
-.services__left div {}
-.services__left div p {}
-.services__left div div:first-of-type {}
-.services__left div div:first-of-type img {}
-.services__left div div:last-of-type {}
-.services__left div div:last-of-type h6 {}
-.services__left div div:last-of-type p {}
+.services__left h5 {
+    text-transform: uppercase;
+    color: #407bff;
+    margin-bottom: 5px;
+}
+.services__left h2 {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+.services__left p {
+    line-height: 25px;
+    color: #939393;
+    margin-top: 20px;
+}
+.services__left ul {
+    margin-top: 15px;
+}
+.services__left ul li {
+    margin-bottom: 10px;
+    color: #939393;
+}
+.services__left ul li i {
+    color: #407bff;
+}
+.services__left div {
+    margin-top: 5px;
+}
+.services__left div > p {
+    font-style: italic;
+    font-weight: 400;
+    color: #000000;
+}
+.services__left > div > div {
+    display: flex;
+    overflow: hidden;
+}
+.services__left div > div > div:first-of-type {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.services__left div > div > div:first-of-type img {
+    width: 100%;
+}
+.services__left div > div > div:last-of-type {
+    margin-left: 20px;
+}
+.services__left div > div > div:last-of-type h6 {
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.services__left div > div > div:last-of-type p {
+    font-style: normal;
+    margin-top: 5px;
+    color: #939393;
+    font-size: 0.9rem;
+}
 .services__right {
     position: relative;
     padding: 10px;
     width: 635px;
+    height: 488px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -269,7 +316,7 @@ main {
 }
 .services__right img {
     width: 100%;
-    /* height: 96%; */
+    height: 100%;
 }
 .services__right button {
     position: absolute;
@@ -289,35 +336,408 @@ main {
 /* ============================== SERVICES • END ============================== */
 
 /* ============================== DASHBOARD • START ============================== */
-.dashboard {}
+.dashboard {
+    width: 100%;
+    background-color: #F8F9FA;
+    padding: 100px 0;
+}
+.dashboard__container {
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.dashboard__container_left {
+    position: relative;
+    padding: 10px;
+    width: 635px;
+    height: 488px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 0 25px #00000020;
+    overflow: hidden;
+}
+.dashboard__container_left img {
+    width: 100%;
+    height: 100%;
+}
+.dashboard__container_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.dashboardCard {
+    position: relative;
+    display: flex;
+    width: 445px;
+    height: 120px;
+    border-radius: 7px;
+    padding: 20px;
+    overflow: hidden;
+}
+.dashboardCard:first-of-type {
+    background-color: #ffffff;
+}
+.dashboardCard:first-of-type::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #407bff;
+    width: 4px;
+    height: 100%;
+}
+.dashboardCard__icon {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dashboardCard__icon i {
+    color: #ffffff;
+    font-size: 1rem;
+}
+.dashboardCard__details {
+    margin-left: 30px;
+}
+.dashboardCard__details > h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.dashboardCard__details > p {
+    line-height: 25px;
+    color: #939393;
+}
+.dashboardCard:nth-of-type(1) .dashboardCard__icon {
+    background-color: #6fe7dd;
+}
+.dashboardCard:nth-of-type(2) .dashboardCard__icon {
+    background-color: #ffc93c;
+}
+.dashboardCard:nth-of-type(3) .dashboardCard__icon {
+    background-color: #f73859;
+}
+.dashboardCard:nth-of-type(4) .dashboardCard__icon {
+    background-color: #407BFF;
+}
 /* ============================== DASHBOARD • END ============================== */
 
 /* ============================== INFO • START ============================== */
-.info {}
+.info {
+    width: 1170px;
+    height: 430px;
+    margin: 0 auto;
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info > .dashboardCard {
+    height: fit-content;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: visible;
+    padding: 20px;
+}
+.info > .dashboardCard:first-of-type::after {
+    display: none;
+}
+.info > .dashboardCard > .dashboardCard__icon {
+    width: 50px;
+    min-height: 50px;
+}
+.info > .dashboardCard > .dashboardCard__details {
+    align-self: start;
+    margin: 20px 0 0 0;
+}
 /* ============================== INFO • END ============================== */
 
 /* ============================== PRICING • START ============================== */
-.pricing {}
+.pricing {
+    width: 100%;
+    height: 840px;
+    background-color: #F8F9FA;
+    padding: 100px 0;
+}
+.pricing_container {
+    width: 100%;
+}
+.pricing_container h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+.pricing_container p {
+    color: #939393;
+    text-align: center;
+    margin: 10px 0 50px;
+}
+.pricing_container_cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.pricingCard {
+    width: 286px;
+    height: 508px;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 40px;
+}
+.pricingCard h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+}
+.pricingCard strong {
+    position: relative;
+    display: block;
+    width: fit-content;
+    margin: 10px auto;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #407bff;
+}
+.pricingCard strong sup {
+    position: absolute;
+    top: -5px;
+    left: -15px;
+    font-size: 1.5rem;
+}
+.pricingCard ul {
+    margin-bottom: 50px;
+}
+.pricingCard ul li {
+    display: flex;
+    gap: 5px;
+    color: #939393;
+    line-height: 25px;
+}
+.pricingCard ul li:not(:last-of-type) {
+    margin-bottom: 5px;
+}
+.pricingCard ul li i {
+    color: #407bff;
+}
+.pricingCard button {
+    display: block;
+    width: fit-content;
+    height: 48px;
+    border-radius: 24px;
+    background-color: #ffffff;
+    color: #407bff;
+    border: 1px solid #407bff;
+    outline: none;
+    margin: 0 auto;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+.pricingCard:nth-of-type(2) {
+    box-shadow: 0 10px 20px #00000020;
+}
+.pricingCard:nth-of-type(2) button {
+    background-color: #407bff;
+    color: #ffffff;
+    border: none;
+}
 /* ============================== PRICING • END ============================== */
 
 /* ============================== ADVANTAGES • START ============================== */
-.advantages {}
+.advantages {
+    width: 1170px;
+    height: 644px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+.advantages > h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+.advantages > p {
+    color: #939393;
+    text-align: center;
+    margin: 10px 0 50px;
+}
+.advantages__container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    background-color: #ffffff;
+}
+.advantages__container .dashboardCard {
+    width: 540px;
+    height: 140px;
+}
+/* .advantages__container .dashboardCard__icon {} */
+/* .advantages__container .dashboardCard__icon > i {} */
+/* .advantages__container .dashboardCard__details {} */
+/* .advantages__container .dashboardCard__details h4 {} */
+.advantages__container .dashboardCard__details p {
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+.advantages__container .dashboardCard__details a {
+    font-size: 0.8rem;
+    color: #407bff;
+}
+.advantages__container .dashboardCard:first-of-type::after {
+    display: none;
+}
 /* ============================== ADVANTAGES • END ============================== */
 
 /* ============================== FEEDBACK • START ============================== */
-.feedback {}
+.feedback {
+    width: 1170px;
+    height: 394px;
+    margin: 0 auto;
+    padding: 100px 0;
+    display: flex;
+}
+.feedback article:first-of-type {
+    width: 350px;
+}
+.feedback article:first-of-type > p {
+    color: #407bff;
+    text-transform: uppercase;
+}
+.feedback article:first-of-type > h2 {
+    font-size: 2.1rem;
+    margin: 5px 0 30px;
+    font-weight: 500;
+}
+.feedback article:first-of-type > div {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.feedback article:first-of-type > div button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    background-color: #cccccc;
+    color: #ffffff;
+    outline: none;
+    cursor: pointer;
+}
+.feedback_comments {
+    width: 760px;
+    display: flex;
+}
+.feedback_comments div {
+    margin-top: 5px;
+}
+.feedback_comments div > p {
+    font-style: italic;
+    font-weight: 400;
+    line-height: 25px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.feedback_comments > div > div {
+    display: flex;
+    overflow: hidden;
+}
+.feedback_comments div > div > div:first-of-type {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.feedback_comments div > div > div:first-of-type img {
+    width: 100%;
+}
+.feedback_comments div > div > div:last-of-type {
+    margin-left: 20px;
+}
+.feedback_comments div > div > div:last-of-type h6 {
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.feedback_comments div > div > div:last-of-type p {
+    font-style: normal;
+    margin-top: 5px;
+    color: #939393;
+    font-size: 0.9rem;
+}
+.feedback_radios {
+    width: fit-content;
+    display: flex;
+    gap: 10px;
+    margin: 20px auto 0;
+}
+.feedback_radios div {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #00000033;
+    cursor: pointer;
+}
+.feedback_radios div:first-of-type {
+    background-color: #407bff;
+}
 /* ============================== FEEDBACK • END ============================== */
 
 /* ============================== ABOUT • START ============================== */
 .about {}
+.about__left {}
+.about__left > img {}
+.about__right {}
+.about__right > p:first-of-type {}
+.about__right > h3 {}
+.about__right > p:last-of-type {}
+.about__right > p:last-of-type span {}
+.about__right > ul {}
+.about__right > ul > li {}
+.about__right > ul > li > i {}
+.about__right > div {}
+.about__right > div > div:first-of-type {}
+.about__right > div > div:last-of-type {}
+.about__right > div > div:last-of-type > h3 {}
+.about__right > div > div:last-of-type > p {}
 /* ============================== ABOUT • END ============================== */
 
 /* ============================== NEWS • START ============================== */
 .news {}
+.news > h2 {}
+.news > p {}
+.newsContainer {}
+.newsCard {}
+.newsCard__top {}
+.newsCard__top > div:first-of-type {}
+.newsCard__top > div:first-of-type > img {}
+.newsCard__top > div:last-of-type {}
+.newsCard__top > div:last-of-type > h5 {}
+.newsCard__top > div:last-of-type > p {}
+.newsCard__main {}
+.newsCard__main > p {}
+.newsCard__main > h3 {}
+.newsCard__main > button {}
 /* ============================== NEWS • END ============================== */
 
 /* ============================== CONTACT • START ============================== */
 .contact {}
+.contact > h2 {}
+.contact > p {}
+.contact > div {}
+.contact_form {}
+.contact_form div {}
+.contact_form label {}
+.contact_form input {}
+.contact_form button {}
+.contact_info {}
+.contact_info h3 {}
+.contact_info ul {}
+.contact_info ul li {}
+.contact_info ul li i {}
 /* ============================== CONTACT • END ============================== */
 
 /* ============================== FOOTER • START ============================== */
