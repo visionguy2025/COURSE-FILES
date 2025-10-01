@@ -1,0 +1,151 @@
+/* ▼ ============================= ↓ | VARIABLES | ↓ ============================= ▼ */
+:root {
+    /* COLOR PALLETS */
+    --color_theme: #aaff00;
+    --color_theme_50: #aaff0050;
+    --color_light: #ffffff;
+    --color_dark: #000000;
+
+    /* MARGIN CENTER */
+    --margin_center: 0 auto;
+
+    /* CUSTOM PADDING VALUES */
+    --padding_container: 0px 0px 0px 0px; /* top right bottom left */
+    --padding_section: 0px 0px 0px 0px; /* top right bottom left */
+
+    /* CUSTOM TRANSITION EFFECTS */
+    --transition_fast: 150ms linear;
+    --transition_middle: 250ms ease-out;
+    --transition_slow: 400ms ease-in-out;
+
+    /* CUSTOM TRANSITION FOR ELASTIC EFFECT */
+    --transition_elastic: 300ms linear(0 0%, 0.22 2.1%, 0.86 6.5%, 1.11 8.6%, 1.3 10.7%, 1.35 11.8%, 1.37 12.9%, 1.37 13.7%, 1.36 14.5%, 1.32 16.2%, 1.03 21.8%, 0.94 24%, 0.89 25.9%, 0.88 26.85%, 0.87 27.8%, 0.87 29.25%, 0.88 30.7%, 0.91 32.4%, 0.98 36.4%, 1.01 38.3%, 1.04 40.5%, 1.05 42.7%, 1.05 44.1%, 1.04 45.7%, 1 53.3%, 0.99 55.4%, 0.98 57.5%, 0.99 60.7%, 1 68.1%, 1.01 72.2%, 1 86.7%, 1 100%);
+
+    /* CUSTOM TRANSITION FOR BOUNCE EFFECT */
+    --transition_bounce: 300ms linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.56 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%);
+}
+/* ▲ ============================= ↑ | VARIABLES | ↑ ============================= ▲ */
+
+
+
+/* ▼ ============================= ↓ | GLOBAL | ↓ ============================= ▼ */
+* {
+    /* BOX SIZING */
+    box-sizing: border-box;
+
+    /* REMOVE DEFAULT SPACES */
+    margin: 0;
+    padding: 0;
+
+    /* ZEROING ADDITIONAL DEFAULT ELEMENTS */
+    list-style: none;
+    text-decoration: none;
+}
+/* ▲ ============================= ↑ | GLOBAL | ↑ ============================= ▲ */
+
+
+
+/* ▼ ============================= ↓ | GOOGLE FONTS | ↓ ============================= ▼ */
+/* JOSEFIN SLAB */
+.josefin-slab-untitled {
+  font-family: "Josefin Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* MONOTON */
+.monoton-regular-untitled {
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* MONTSERRAT */
+.montserrat-untitled {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* BITCOUNT */
+.bitcount-ink-untitled {
+  font-family: "Bitcount Ink", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 500; /* 100-900 */
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0,
+    "SZP1" 0,
+    "SZP2" 0,
+    "XPN1" 0,
+    "XPN2" 0,
+    "YPN1" 0,
+    "YPN2" 0;
+}
+/* ▲ ============================= ↑ | GOOGLE FONTS | ↑ ============================= ▲ */
+
+
+
+/* ▼ ============================= ↓ | COMMON | ↓ ============================= ▼ */
+/* overlay */
+.overlay {
+  /* z-index: 5; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(0.5);
+  backdrop-filter: blur(10px);
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000075;
+}
+
+/* section containers */
+.section_container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 5px 5px;
+}
+
+/* flex center center */
+.flexCC {
+    display: flex;
+    justify-content: center;
+}
+
+/* customButton with hover effect */
+.btn {
+    cursor: pointer;
+}
+.btn:hover {}
+
+/* customForm */
+.label {}
+.input {}
+.input:focus {}
+
+/* custom radio buttons */
+.radioBtn {}
+.radioBtn-active {}
+/* ▲ ============================= ↑ | COMMON | ↑ ============================= ▲ */
+
+
+
+/* ▼ ============================= ↓ | ANIMATIONS | ↓ ============================= ▼ */
+/* untitled animation 1 */
+@keyframes untitled1 {
+    0% {}
+    100% {}
+}
+
+/* untitled animation 2 */
+@keyframes untitled1 {
+    0% {}
+    100% {}
+}
+/* ▲ ============================= ↑ | ANIMATIONS | ↑ ============================= ▲ */

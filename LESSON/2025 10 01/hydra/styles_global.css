@@ -1,0 +1,33 @@
+/* CUSTOM VALUES */
+:root {
+    --color: #ffffff50;
+}
+
+/* ZERIOING DEFAULTS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* CUSTOM FONTS FROM GOOGLE CDN */
+.font_untitled {}
+
+/* CUSTOM ANIMATIONS */
+@keyframes animation1 {
+    0% {}
+    100% {}
+}
+@keyframes animation2 {
+    0% {}
+    100% {}
+}
+
+/* COMMON */
+.sectionContainer {}
+.btn {}
+.btn:hover {}
+.input {}
+.input:focus {}
