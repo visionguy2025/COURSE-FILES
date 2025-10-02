@@ -1,9 +1,22 @@
-/* CUSTOM VALUES */
+/* ▼ ======================== ↓ | CUSTOM VALUES | ↓ ======================== ▼ */
 :root {
     --color: #ffffff50;
-}
+    --color_light: #ffffff;
+    --color_dark: #000000;
+    --color_theme: #8176af;
+    --color_themeLight: #b0a8cf;
+    --color_themeDark: #544b75;
+    --color_theme_75: #8176af75;
 
-/* ZERIOING DEFAULTS */
+    --transition_fast: 150ms ease-in-out;
+    --transition_mid: 300ms linear;
+    --transition_slow: 500ms ease-out;
+}
+/* ▲ ======================== ↑ | CUSTOM VALUES | ↑ ======================== ▲ */
+
+
+
+/* ▼ ======================== ↓ | ZEROING DEFAULTS | ↓ ======================== ▼ */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,11 +24,22 @@
     list-style: none;
     text-decoration: none;
 }
+/* ▲ ======================== ↑ | ZEROING DEFAULTS | ↑ ======================== ▲ */
 
-/* CUSTOM FONTS FROM GOOGLE CDN */
-.font_untitled {}
 
-/* CUSTOM ANIMATIONS */
+
+/* ▼ ======================== ↓ | GOOGLE FONTS | ↓ ======================== ▼ */
+.montserrat-500 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+/* ▲ ======================== ↑ | GOOGLE FONTS | ↑ ======================== ▲ */
+
+
+
+/* ▼ ======================== ↓ | CUSTOM ANIMATIONS | ↓ ======================== ▼ */
 @keyframes animation1 {
     0% {}
     100% {}
@@ -24,10 +48,40 @@
     0% {}
     100% {}
 }
+/* ▲ ======================== ↑ | CUSTOM ANIMATIONS | ↑ ======================== ▲ */
 
-/* COMMON */
-.sectionContainer {}
-.btn {}
-.btn:hover {}
+
+
+/* ▼ ======================== ↓ | COMMON | ↓ ======================== ▼ */
+.sectionContainer {
+    width: min(1160px, 98%);
+    margin: 0 auto;
+}
+.mainSections {
+    padding: 100px 0;
+}
+.btn {
+    min-width: 100px;
+    min-height: 50px;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+    color: var(--color_theme);
+    background: var(--color_light);
+    border: 2px solid var(--color_theme);
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: none;
+    transition: var(--transition_mid);
+}
+.btn:hover {
+    color: var(--color_light);
+    background: var(--color_theme);
+    border-color: var(--color_theme);
+    box-shadow: 0px 0px 15px var(--color_themeLight);
+}
 .input {}
 .input:focus {}
+/* ▲ ======================== ↑ | COMMON | ↑ ======================== ▲ */

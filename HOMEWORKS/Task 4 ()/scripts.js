@@ -1,0 +1,2 @@
+// untitled
+const untitled = () => {}

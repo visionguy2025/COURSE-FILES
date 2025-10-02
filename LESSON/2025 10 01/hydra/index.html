@@ -30,12 +30,17 @@
     </head>
     <body>
 
-        <!-- HEADER -->
+        <!-- START ======================= HEADER ======================= START -->
         <header class="header">
             <section class="header__container sectionContainer">
+                <!-- LOGO -->
                 <div class="header__container--logo">
-                    <img src="./images/components/" alt="logo">
+                    <a href="#">
+                        <img src="./images/components/logo.png" alt="logo">
+                    </a>
                 </div>
+
+                <!-- NAVBAR -->
                 <nav class="header__container--navbar">
                     <li>
                         <a href="#"> About </a>
@@ -50,92 +55,148 @@
                         <a href="#"> How To </a>
                     </li>
                 </nav>
+
+                <!-- PANEL -->
                 <div class="header__container--panel">
-                    <button> Contact Us </button>
-                    <button> Join Hydra </button>
+                    <button class="btn"> Contact Us </button>
+                    <button class="btn"> Join Hydra </button>
                 </div>
             </section>
         </header>
+        <!--  END  ======================= HEADER =======================  END  -->
 
-        <!-- MAIN -->
+
+
+        <!-- START ======================= MAIN ======================= START -->
         <main class="main">
             <!-- HOME -->
-            <section class="home sectionContainer"></section>
-
-            <!-- ABOUT -->
-            <section class="about sectionContainer"></section>
-
-            <!-- UNTITLED1 -->
-            <section class="untitled1 sectionContainer"></section>
-
-            <!-- UNTITLED2 -->
-            <section class="untitled2 sectionContainer"></section>
-
-            <!-- UNTITLED3 -->
-            <section class="untitled3 sectionContainer"></section>
-
-            <!-- CONTACT -->
-            <section class="contact sectionContainer"></section>
-        </main>
-
-        <!-- FOOTER -->
-        <footer class="footer">
-            <section class="footer__top sectionContainer">
-                <div class="footer__top--logo">
-                    <img src="./images/components/" alt="logo">
-                </div>
-                <ul class="footer__top--list">
-                    <li>
-                        <a href="#"> About </a>
-                    </li>
-                    <li>
-                        <a href="#"> Services </a>
-                    </li>
-                    <li>
-                        <a href="#"> Technologies </a>
-                    </li>
-                    <li>
-                        <a href="#"> How To </a>
-                    </li>
-                    <li>
-                        <a href="#"> Join Hydra </a>
-                    </li>
-                </ul>
-                <ul class="footer__top--list">
-                    <li>
-                        <a href="#"> F.A.Q. </a>
-                    </li>
-                    <li>
-                        <a href="#"> Sitemap </a>
-                    </li>
-                    <li>
-                        <a href="#"> Conditions </a>
-                    </li>
-                    <li>
-                        <a href="#"> Licenses </a>
-                    </li>
-                </ul>
-                <div class="footer__top--social">
-                    <h3> Socialize with Hydra </h3>
-
-                    <div>
-                        <a href="#">
-                            <i class=""></i>
-                        </a>
-                        <a href="#"></a>
-                    </div>
-
-                    <button></button>
+            <section class="home sectionContainer mainSections">
+                <div class="homeLeft">
+                    <h2>
+                        Dive Into The Depths Of Virtual Reality
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore nisl tincidunt eget. Lectus mauris eros in vitae .
+                    </p>
+                    <button class="btn">
+                        BUILD YOUR WORLD
+                    </button>
                 </div>
             </section>
-            <section class="footer__bottom sectionContainer"></section>
+
+            <!-- ABOUT -->
+            <section class="about sectionContainer mainSections"></section>
+
+            <!-- UNTITLED1 -->
+            <section class="untitled1 sectionContainer mainSections"></section>
+
+            <!-- UNTITLED2 -->
+            <section class="untitled2 sectionContainer mainSections"></section>
+
+            <!-- UNTITLED3 -->
+            <section class="untitled3 sectionContainer mainSections"></section>
+
+            <!-- CONTACT -->
+            <section class="contact sectionContainer mainSections"></section>
+        </main>
+        <!--  END  ======================= MAIN =======================  END  -->
+
+
+
+        <!-- START ======================= FOOTER ======================= START -->
+        <footer class="footer">
+            <section class="footer__top sectionContainer">
+                <!-- LOGO -->
+                <div class="footer__top--logo">
+                    <img src="./images/components/logo.png" alt="logo">
+                </div>
+
+                <!-- MIDDLE COLUMN 1 -->
+                <div class="footer__top--list">
+                    <ul>
+                        <li>
+                            <a href="#"> About </a>
+                        </li>
+                        <li>
+                            <a href="#"> Services </a>
+                        </li>
+                        <li>
+                            <a href="#"> Technologies </a>
+                        </li>
+                        <li>
+                            <a href="#"> How To </a>
+                        </li>
+                        <li>
+                            <a href="#"> Join Hydra </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- MIDDLE COLUMN 2 -->
+                <div class="footer__top--list">
+                    <ul>
+                        <li>
+                            <a href="#"> F.A.Q. </a>
+                        </li>
+                        <li>
+                            <a href="#"> Sitemap </a>
+                        </li>
+                        <li>
+                            <a href="#"> Conditions </a>
+                        </li>
+                        <li>
+                            <a href="#"> Licenses </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- SOCIAL -->
+                <div class="footer__top--social">
+                    <h3> Socialize with Hydra </h3>
+                    <div>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-pinterest"></i>
+                        </a>
+                    </div>
+                    <button class="btn">
+                        Build Your World
+                    </button>
+                </div>
+            </section>
+            <section class="footer__bottom sectionContainer">
+                <p>
+                    2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED 
+                </p>
+            </section>
         </footer>
+        <!--  END  ======================= FOOTER =======================  END  -->
 
-        <!-- SCRIPT -->
+
+
+        <!-- START ======================= SCRIPTS ======================= START -->
         <script src="./app.js"></script>
+        <!--  END  ======================= SCRIPTS =======================  END  -->
+        
 
-        <!-- REFERENCE LINK -->
+
+        <!-- START ======================= REFERENCE LINK ======================= START -->
         <!-- https://www.figma.com/design/ocuZfUZUgHTOm4jqpDWEXI/Hydra-Landing-Page--Community-?node-id=0-1&p=f&t=RsUrXoizdiMURVMb-0 -->
+        <!--  END  ======================= REFERENCE LINK =======================  END  -->
         
     </body>
 </html>
