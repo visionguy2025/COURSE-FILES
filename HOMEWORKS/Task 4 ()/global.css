@@ -1,6 +1,11 @@
 /* ▼ ===================== ↓↓↓ | CUSTOM VALUES | ↓↓↓ ===================== ▼ */
 /* ROOT */
 :root {
+    --color_light: #ffffff;
+    --color_light_50: #ffffff50;
+    --color_dark: #000000;
+    --color_dark_50: #00000050;
+    --color_grey: #888888;
     --color_theme: #8a2be2;
     --color_theme_50: #8a2be250;
 
@@ -58,11 +63,10 @@
     height: 100%;
     margin: 0 auto;
     padding: 5px;
-    background: var(--color_theme_50);
 }
 
 /* BUTTONS */
-.btn {}
+/* .btn {} */
 /* ▲ ===================== ↑↑↑ | COMMON | ↑↑↑ ===================== ▲ */
 
 

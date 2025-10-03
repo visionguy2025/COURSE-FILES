@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- JS -->
+    </head>
+    <body>
+
+        <!-- START ====================== | BUTTONS | ====================== START -->
+        <!-- TO TOP BUTTON -->
+        <button id="toTop" onclick="scroll2top()">▲</button>
+
+        <!-- OVERLAY -->
+        <div id="commonOverlay" onclick="enableMobileNav"></div>
+        <!--  END  ====================== | BUTTONS | ======================  END  -->
+
+
+
+        <!-- START ====================== | HEADER | ====================== START -->
+        <header class="header montserrat-500" id="header">
+            <!-- JS -->
+        </header>
+        <!--  END  ====================== | HEADER | ======================  END  -->
+
+
+
+        <!-- START ====================== | MAIN | ====================== START -->
+        <main class="main">
+            <!--  -->
+            <section class="untitled1">
+                <div class="untitled1Container section">
+                    <article></article>
+                    blog
+                    diogonal cards
+                </div>
+            </section>
+
+            <!--  -->
+            <section class="untitled2">
+                <div class="untitled2Container section">
+                    <article></article>
+                    background fixed
+                    some text
+                </div>
+            </section>
+
+            <!--  -->
+            <section class="untitled3">
+                <div class="untitled3Container section">
+                    <article></article>
+                    cards
+                </div>
+            </section>
+
+            ABOUT
+        </main>
+        <!--  END  ====================== | MAIN | ======================  END  -->
+
+
+        
+        <!-- START ====================== | FOOTER | ====================== START -->
+        <footer class="footer montserrat-500" id="footer">
+            <!-- JS -->
+        </footer>
+        <!--  END  ====================== | FOOTER | ======================  END  -->
+        
+
+
+        <!-- START ====================== | SCRIPTS | ====================== START -->
+        <!-- FEATURES -->
+        <script src="../scripts.js"></script>
+        <script src="../utils/features.js"></script>
+        <script src="../utils/setPageTitle.js"></script>
+
+        <!-- COMPONENTS -->
+        <script src="../components/headContents.js"></script>
+        <script src="../components/Header.js"></script>
+        <script src="../components/HeadeMobile.js"></script>
+        <script src="../components/Footer.js"></script>
+
+        <!-- CUSTOM SCRIPTS OF PAGES -->
+        <script>
+            // VARIABLES
+            let isMobile = false
+
+            // COMPONENTS
+            headContents('..')
+            !isMobile ? Header('..') : MobileHeader('..')
+            Footer('..')
+
+            // SET TITLE OF THE PAGE
+            setTitle('LOGO', 'About')
+        </script>
+        <!--  END  ====================== | SCRIPTS | ======================  END  -->
+        
+    </body>
+</html>

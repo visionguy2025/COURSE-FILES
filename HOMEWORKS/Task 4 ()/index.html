@@ -1,82 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- META DATA -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- TITLE OF THE PAGE -->
-        <title> Document </title>
-
-        <!-- CUSTOM ICON OF PAGE TAB ICON -->
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-        <!-- GOOGLE FONT CDN | MONOTON, MONTSERRAT -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-        <!-- FONT AWESOME CDN | v7.0.1 -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-
-        <!-- CUSTOM STYLE SHEETS -->
-        <link rel="stylesheet" href="./global.css">
-        <link rel="stylesheet" href="./styles.css">
-
-        <!-- RESPONSIVITY | LAPTOP, TABLET, MOBILE, EXTRA SMALL -->
-        <link rel="stylesheet" media="(max-width: 1280px)" href="./styles_laptop.css">
-        <link rel="stylesheet" media="(max-width: 768px)" href="./styles_tablet.css">
-        <link rel="stylesheet" media="(max-width: 450px)" href="./styles_mobile.css">
-        <link rel="stylesheet" media="(max-width: 360px)" href="./styles_extrasmall.css">
+        <!-- JS -->
     </head>
     <body>
 
         <!-- START ====================== | BUTTONS | ====================== START -->
         <!-- TO TOP BUTTON -->
-        <!-- <button> ↑ </button> -->
+        <button id="toTop" onclick="scroll2top()">▲</button>
 
-        <!-- MOBILE NAV BUTTON -->
-        <!-- <button> <i class="fa-solid fa-bars"></i> </button> -->
+        <!-- OVERLAY -->
+        <div id="commonOverlay" onclick="enableMobileNav"></div>
         <!--  END  ====================== | BUTTONS | ======================  END  -->
 
 
 
         <!-- START ====================== | HEADER | ====================== START -->
-        <header class="header montserrat-500">
-            <section class="headerContainer section">
-                <!-- LOGO -->
-                <div class="headerContainer__logo">
-                    <img src="./assets/common/logo.png" alt="logo">
-
-                    <div id="header_dropdown">
-                        <div>
-                            <i class="fa-solid fa-sun"></i>
-
-                            <div id="switchBar">
-                                <div id="switchBtn"></div>
-                            </div>
-
-                            <i class="fa-solid fa-moon"></i>
-                        </div>
-                        
-                        <div>
-                            <select name="language" id="language">
-                                <option value="en" selected> English </option>
-                                <option value="az"> Azerbaijani </option>
-                                <option value="tr"> Turkish </option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- NAVBAR -->
-                <nav class="headerContainer__navbar">
-                    <li><a href="#"> Home </a></li>
-                    <li><a href="#"> Gallery </a></li>
-                    <li><a href="#"> About </a></li>
-                    <li><a href="#"> Contact </a></li>
-                </nav>
-            </section>
+        <header class="header montserrat-500" id="header">
+            <!-- JS -->
         </header>
         <!--  END  ====================== | HEADER | ======================  END  -->
 
@@ -88,6 +29,7 @@
             <section class="home">
                 <div class="homeContainer section">
                     <article>
+                        add display none to elements which animated appear on page reload
                         some info
                         cover header too, blurred window effect on header
                         carousel 2buttonSides radioButtonsOnLower
@@ -126,6 +68,7 @@
                 <div class="untitled4Container section">
                     <article></article>
                     bg video
+                    <video src="./assets/The ROCK Eyebrow (4K 60fps).mp4" defaultMuted="true" loop="false" draggable="false" controls></video>
                 </div>
             </section>
 
@@ -150,78 +93,8 @@
 
         
         <!-- START ====================== | FOOTER | ====================== START -->
-        <footer class="footer montserrat-500">
-            <!-- TOP SIDE -->
-            <section class="footerTop section">
-                <div>
-                    <div>
-                        <img src="./assets/common/logo.png" alt="logo">
-                    </div>
-                    <p>
-                        <i class="fa-solid fa-phone"></i>
-                        +994501234567
-                    </p>
-                    <p>
-                        <i class="fa-solid fa-envelope"></i>
-                        loremipsumsitdolor@gmail.com
-                    </p>
-                    <p>
-                        <i class="fa-solid fa-location-dot"></i>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                </div>
-
-                <ul>
-                    <li><a href="#"> Home </a></li>
-                    <li><a href="#"> Gallery </a></li>
-                    <li><a href="#"> About </a></li>
-                    <li><a href="#"> Contact </a></li>
-                </ul>
-
-                <ul>
-                    <li><a href="#"> Lorem </a></li>
-                    <li><a href="#"> Ipsum </a></li>
-                    <li><a href="#"> Sit </a></li>
-                    <li><a href="#"> Dolor </a></li>
-                    <li><a href="#"> Amet </a></li>
-                </ul>
-
-                <div>
-                    <h3>
-                        Untitled
-                    </h3>
-
-                    <div>
-                        <a href="#">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-instagram-square"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-youtube"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fa-brands fa-artstation"></i>
-                        </a>
-                    </div>
-
-                    <div>
-                        <form>
-                            <input type="email" placeholder="Your email">
-                            <button> Subscribe </button>
-                        </form>
-                    </div>
-                </div>
-            </section>
-
-            <!-- BOTTOM SIDE -->
-            <section class="footerBottom section">
-                <p></p>
-            </section>
+        <footer class="footer montserrat-500" id="footer">
+            <!-- JS -->
         </footer>
         <!--  END  ====================== | FOOTER | ======================  END  -->
         
@@ -230,9 +103,43 @@
         <!-- START ====================== | SCRIPTS | ====================== START -->
         <!-- FEATURES -->
         <script src="./scripts.js"></script>
+        <script src="./utils/features.js"></script>
+        <script src="./utils/setPageTitle.js"></script>
 
         <!-- COMPONENTS -->
-        <script></script>
+        <script src="./components/headContents.js"></script>
+        <script src="./components/Header.js"></script>
+        <script src="./components/HeadeMobile.js"></script>
+        <script src="./components/Footer.js"></script>
+
+        <!-- CUSTOM SCRIPTS OF PAGES -->
+        <script>
+            document.addEventListener('scroll', () => {
+                console.log(window.scrollY)
+            })
+
+            document.querySelector('video').addEventListener('loadedmetadata', () => {
+                console.log(
+                    document.querySelector('video').currentTime,
+                    document.querySelector('video').duration,
+                    // document.querySelector('video').style.top
+                )
+            })
+
+
+
+
+            // VARIABLES
+            let isMobile = false
+
+            // COMPONENTS
+            headContents('.')
+            !isMobile ? Header('.') : MobileHeader('.')
+            Footer('.')
+
+            // SET TITLE OF THE PAGE
+            setTitle('LOGO', 'Home')
+        </script>
         <!--  END  ====================== | SCRIPTS | ======================  END  -->
         
     </body>
