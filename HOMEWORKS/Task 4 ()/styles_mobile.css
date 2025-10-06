@@ -1,0 +1,63 @@
+/* 361px-450px */
+/* ▼ ===================== ↓↓↓ | HEADER | ↓↓↓ ===================== ▼ */
+/* NAVBAR */
+.headerContainer__navbar {
+    border: 0;
+    width: 100vw;
+}
+
+/* PAGE BUTTONS */
+#mobileBtn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+}
+/* ▲ ===================== ↑↑↑ | HEADER | ↑↑↑ ===================== ▲ */
+
+
+
+/* ▼ ===================== ↓↓↓ | MAIN | ↓↓↓ ===================== ▼ */
+/* HOME */
+#carousel_prev {
+    left: 20px;
+}
+#carousel_next {
+    right: 20px;
+}
+.carousel_radios {
+    top: 94%;
+}
+.btn_carouselRadio {
+    width: 20px;
+    height: 20px;
+}
+.homeCarouselCard > div {
+    margin: 40vh auto 0;
+    width: 50vw;
+}
+.homeCarouselCard > div > h2 {
+    font-size: 2.5rem;
+}
+.homeCarouselCard > div > p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+.homeCarouselCard > div > a {
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+
+/* UNTITLED2 */
+.untitled2Container > h2 {
+    font-size: 3rem;
+}
+
+/* UNTITLED6 */
+.untitled6Container > article > form {
+    width: 98%;
+}
+.untitled6Container > article > form > div:first-of-type {
+    flex-direction: column;
+    gap: 10px;
+}
+/* ▲ ===================== ↑↑↑ | MAIN | ↑↑↑ ===================== ▲ */

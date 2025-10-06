@@ -24,34 +24,12 @@
 
 
         <!-- START ====================== | MAIN | ====================== START -->
-        <main class="main">
-            <!--  -->
-            <section class="untitled1">
-                <div class="untitled1Container section">
-                    <article></article>
-                    blog
-                    diogonal cards
-                </div>
+        <main class="main monoton-regular">
+            <section class="gallery">
+                <article class="gallerySection section">
+                    GALLERY
+                </article>
             </section>
-
-            <!--  -->
-            <section class="untitled2">
-                <div class="untitled2Container section">
-                    <article></article>
-                    background fixed
-                    some text
-                </div>
-            </section>
-
-            <!--  -->
-            <section class="untitled3">
-                <div class="untitled3Container section">
-                    <article></article>
-                    cards
-                </div>
-            </section>
-
-            GALLERY
         </main>
         <!--  END  ====================== | MAIN | ======================  END  -->
 
@@ -67,28 +45,71 @@
 
         <!-- START ====================== | SCRIPTS | ====================== START -->
         <!-- FEATURES -->
-        <script src="../scripts.js"></script>
         <script src="../utils/features.js"></script>
         <script src="../utils/setPageTitle.js"></script>
+        <script src="../utils/changeLanguage.js"></script>
 
         <!-- COMPONENTS -->
         <script src="../components/headContents.js"></script>
         <script src="../components/Header.js"></script>
-        <script src="../components/HeadeMobile.js"></script>
         <script src="../components/Footer.js"></script>
 
         <!-- CUSTOM SCRIPTS OF PAGES -->
         <script>
-            // VARIABLES
-            let isMobile = false
+            // STATE VALUES
+            let isMobileHeaderContent = false
 
             // COMPONENTS
             headContents('..')
-            !isMobile ? Header('..') : MobileHeader('..')
+            Header('..')
             Footer('..')
 
-            // SET TITLE OF THE PAGE
+            // SET DEFAULTS
             setTitle('LOGO', 'Gallery')
+            changeLanguage()
+            switchLight()
+
+            // MANAGE EVENTS
+            window.addEventListener('scroll', () => {
+                // VARIABLES
+                var header = document.getElementById('header')
+                var toTopBtn = document.getElementById('toTop')
+                var currentYposition = window.scrollY
+
+                // SHOW OR HIDE TOTOPBTN OVER SCROLL OFFSET
+                if(currentYposition > 400) {
+                    toTopBtn.style.visibility = `visible`
+                    toTopBtn.style.opacity = `100%`
+                    header.style.position = 'fixed'
+                } else {
+                    toTopBtn.style.visibility = `hidden`
+                    toTopBtn.style.opacity = `0%`
+                    header.style.position = 'absolute'
+                }
+            })
+            window.addEventListener('resize', () => {
+                let headerInnerHTML = Header('..')
+                if(window.innerWidth > 768) {
+                    if(!isMobileHeaderContent) {
+                        document.querySelector('#header').innerHTML = ``
+                        document.querySelector('#header').innerHTML = headerInnerHTML
+                        document.querySelector('#commonOverlay').style.display = `none`
+                    }
+                    isMobileHeaderContent = true
+                } else {
+                    if(isMobileHeaderContent) {
+                        document.querySelector('#header').innerHTML = ``
+                        document.querySelector('#header').innerHTML = headerInnerHTML
+                        document.querySelector('#commonOverlay').style.display = `none`
+                    }
+                    isMobileHeaderContent = false
+                }
+            })
+        </script>
+
+        <!-- ADD ADDITIONAL CSS OF PAGE -->
+        <script>
+            document.head.innerHTML += `<link rel="stylesheet" href="./gallery.css">`
         </script>
         <!--  END  ====================== | SCRIPTS | ======================  END  -->
         

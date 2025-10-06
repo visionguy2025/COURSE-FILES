@@ -24,34 +24,13 @@
 
 
         <!-- START ====================== | MAIN | ====================== START -->
-        <main class="main">
-            <!--  -->
-            <section class="untitled1">
-                <div class="untitled1Container section">
-                    <article></article>
-                    blog
-                    diogonal cards
-                </div>
+        <main class="main monoton-regular">
+            <section class="contact">
+                <article class="contactSection section">
+                    CONTACT
+                    <div id="map"></div>
+                </article>
             </section>
-
-            <!--  -->
-            <section class="untitled2">
-                <div class="untitled2Container section">
-                    <article></article>
-                    background fixed
-                    some text
-                </div>
-            </section>
-
-            <!--  -->
-            <section class="untitled3">
-                <div class="untitled3Container section">
-                    <article></article>
-                    cards
-                </div>
-            </section>
-
-            CONTACT
         </main>
         <!--  END  ====================== | MAIN | ======================  END  -->
 
@@ -62,33 +41,111 @@
             <!-- JS -->
         </footer>
         <!--  END  ====================== | FOOTER | ======================  END  -->
-        
+
 
 
         <!-- START ====================== | SCRIPTS | ====================== START -->
         <!-- FEATURES -->
-        <script src="../scripts.js"></script>
         <script src="../utils/features.js"></script>
         <script src="../utils/setPageTitle.js"></script>
+        <script src="../utils/changeLanguage.js"></script>
 
         <!-- COMPONENTS -->
         <script src="../components/headContents.js"></script>
         <script src="../components/Header.js"></script>
-        <script src="../components/HeadeMobile.js"></script>
         <script src="../components/Footer.js"></script>
 
         <!-- CUSTOM SCRIPTS OF PAGES -->
         <script>
-            // VARIABLES
-            let isMobile = false
+            // STATE VALUES
+            let isMobileHeaderContent = false
 
             // COMPONENTS
             headContents('..')
-            !isMobile ? Header('..') : MobileHeader('..')
+            Header('..')
             Footer('..')
 
-            // SET TITLE OF THE PAGE
+            // SET DEFAULTS
             setTitle('LOGO', 'Contact')
+            changeLanguage()
+            switchLight()
+
+            // MANAGE EVENTS
+            window.addEventListener('scroll', () => {
+                // VARIABLES
+                var header = document.getElementById('header')
+                var toTopBtn = document.getElementById('toTop')
+                var currentYposition = window.scrollY
+
+                // SHOW OR HIDE TOTOPBTN OVER SCROLL OFFSET
+                if(currentYposition > 400) {
+                    toTopBtn.style.visibility = `visible`
+                    toTopBtn.style.opacity = `100%`
+                    header.style.position = 'fixed'
+                } else {
+                    toTopBtn.style.visibility = `hidden`
+                    toTopBtn.style.opacity = `0%`
+                    header.style.position = 'absolute'
+                }
+            })
+            window.addEventListener('resize', () => {
+                let headerInnerHTML = Header('..')
+                if(window.innerWidth > 768) {
+                    if(!isMobileHeaderContent) {
+                        document.querySelector('#header').innerHTML = ``
+                        document.querySelector('#header').innerHTML = headerInnerHTML
+                        document.querySelector('#commonOverlay').style.display = `none`
+                    }
+                    isMobileHeaderContent = true
+                } else {
+                    if(isMobileHeaderContent) {
+                        document.querySelector('#header').innerHTML = ``
+                        document.querySelector('#header').innerHTML = headerInnerHTML
+                        document.querySelector('#commonOverlay').style.display = `none`
+                    }
+                    isMobileHeaderContent = false
+                }
+            })
+        </script>
+
+        <!-- ✅ Leaflet JS (no integrity attribute) -->
+        <script>
+            document.head.innerHTML += `
+                <!-- ✅ Leaflet CSS (no integrity attribute) -->
+                <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+
+                <style>
+                    /* Required for map to show */
+                    #map {
+                        width: 400px;
+                        height: 300px;
+                    }
+                </style>
+            `
+
+        </script>
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+        <script>
+            // Wait for page to load
+            window.onload = function () {
+            const coords = [40.4093, 49.8671]; // Baku, Azerbaijan
+
+            const map = L.map('map').setView(coords, 13);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+
+            L.marker(coords)
+                .addTo(map)
+                .bindPopup('Our Office Location')
+                .openPopup();
+            };
+        </script>
+
+        <!-- ADD ADDITIONAL CSS OF PAGE -->
+        <script>
+            document.head.innerHTML += `<link rel="stylesheet" href="./contact.css">`
         </script>
         <!--  END  ====================== | SCRIPTS | ======================  END  -->
         

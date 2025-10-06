@@ -1,0 +1,27 @@
+/* 769px-1280px */
+/* ▼ ===================== ↓↓↓ | MAIN | ↓↓↓ ===================== ▼ */
+/* UNTITLED1 */
+.untitled1Container:has(.catalogCard:hover) {
+    width: 98%;
+}
+
+/* UNTITLED2 */
+.untitled2Container > p {
+    margin-left: 10%;
+}
+
+/* UNTITLED6 */
+.untitled6Container > article > form {
+    width: 70%;
+}
+/* ▲ ===================== ↑↑↑ | MAIN | ↑↑↑ ===================== ▲ */
+
+
+
+/* ▼ ===================== ↓↓↓ | FOOTER | ↓↓↓ ===================== ▼ */
+/* TOP SIDE */
+.footerTop {
+    gap: 250px;
+    padding: 50px 20px 25px;
+}
+/* ▲ ===================== ↑↑↑ | FOOTER | ↑↑↑ ===================== ▲ */

@@ -13,7 +13,7 @@ const Header = (directory) => {
                     <div>
                         <i class="fa-solid fa-sun"></i>
 
-                        <div id="switchBar" onclick="switchLight()">
+                        <div id="switchBar" onclick="switchLight(true)">
                             <div id="switchBtn"></div>
                         </div>
 
@@ -21,11 +21,14 @@ const Header = (directory) => {
                     </div>
                     
                     <div>
-                        <select name="language" id="language">
-                            <option value="en" selected> English </option>
-                            <option value="az"> Azerbaijani </option>
-                            <option value="tr"> Turkish </option>
-                        </select>
+                        <div id="languageBar">
+                            <p id="languageBar_currentLanguage"></p>
+                            <div id="languageBar_options">
+                                <p id="languageBar_options__lang_en" onclick="changeLanguage(this)"> English </p>
+                                <p id="languageBar_options__lang_az" onclick="changeLanguage(this)"> Azerbaijani </p>
+                                <p id="languageBar_options__lang_tr" onclick="changeLanguage(this)"> Turkish </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

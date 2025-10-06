@@ -1,0 +1,50 @@
+/* 0px(250px)-360px */
+/* ▼ ===================== ↓↓↓ | MAIN | ↓↓↓ ===================== ▼ */
+/* HOME */
+#carousel_prev {
+    left: 20px;
+}
+#carousel_next {
+    right: 20px;
+}
+.carousel_radios {
+    top: 94%;
+}
+.btn_carouselRadio {
+    width: 20px;
+    height: 20px;
+}
+.homeCarouselCard > div {
+    margin: 30vh auto 0;
+    width: 50vw;
+}
+.homeCarouselCard > div > h2 {
+    font-size: 2.5rem;
+}
+.homeCarouselCard > div > p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+.homeCarouselCard > div > a {
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+
+/* UNTITLED2 */
+.untitled2Container > h2 {
+    font-size: 2rem;
+}
+/* ▲ ===================== ↑↑↑ | MAIN | ↑↑↑ ===================== ▲ */
+
+
+
+/* ▼ ===================== ↓↓↓ | FOOTER | ↓↓↓ ===================== ▼ */
+/* TOP SIDE */
+.footerTop > div:nth-of-type(2) > div:last-of-type {
+    width: 98%;
+}
+.footerTop > div:nth-of-type(2) > div:last-of-type > form > button {
+    width: 50px;
+    font-size: 0.5rem;
+}
+/* ▲ ===================== ↑↑↑ | FOOTER | ↑↑↑ ===================== ▲ */

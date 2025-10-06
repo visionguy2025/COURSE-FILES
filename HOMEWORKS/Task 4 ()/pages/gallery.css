@@ -1,0 +1,17 @@
+/* SECTION #1 */
+section.gallery {
+    background-color: blue;
+    width: 100%;
+    height: 100vh;
+}
+article.gallerySection {
+    background-color: cyan;
+    height: 100%;
+}
+
+
+/* RESPONSIVITY */
+@media only screen and (max-width: 1280px) {}
+@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 450px) {}
+@media only screen and (max-width: 360px) {}

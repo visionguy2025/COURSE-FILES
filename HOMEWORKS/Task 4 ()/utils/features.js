@@ -1,39 +1,75 @@
 // VARIABLES
-let isLight = true
 let isMobileNav = false
 
 // FEATURE HANDLERS
-const switchLight = () => {
-    if(!isLight) {
-        document.documentElement.style.setProperty('--color_light', '#ffffff')
-        document.documentElement.style.setProperty('--color_light_50', '#ffffff50')
-        document.documentElement.style.setProperty('--color_dark', '#000000')
-        document.documentElement.style.setProperty('--color_dark_50', '#00000050')
-        document.documentElement.style.setProperty('--color_grey', '#888888')
-        document.documentElement.style.setProperty('--color_theme', '#8a2be2')
-        document.documentElement.style.setProperty('--color_theme_50', '#8a2be250')
+const switchLight = (change=false) => {
+    // STATE VALUES
+    let isChanged = change
+    let lightmode = JSON.parse(localStorage.getItem('lightmode')) || 'light'
 
-        document.getElementById('switchBtn').style.left = `2px`
+    // CONDITIONS
+    if(!isChanged) {
+        if(lightmode == 'light') {
+            document.documentElement.style.setProperty('--color_light', '#ffffff')
+            document.documentElement.style.setProperty('--color_light_50', '#ffffff50')
+            document.documentElement.style.setProperty('--color_dark', '#000000')
+            document.documentElement.style.setProperty('--color_dark_50', '#00000050')
+            document.documentElement.style.setProperty('--color_grey', '#888888')
+            document.documentElement.style.setProperty('--color_theme', '#8a2be2')
+            document.documentElement.style.setProperty('--color_theme_50', '#8a2be250')
 
-        document.querySelector('#header_dropdown > div:nth-of-type(1) i[class*="sun"]').style.scale = `1.5`
-        document.querySelector('#header_dropdown > div:nth-of-type(1) i[class*="moon"]').style.scale = `1.0`
+            document.getElementById('switchBtn').style.left = `2px`
 
-        isLight = true
+            document.querySelector('#header_dropdown > div:nth-of-type(1) i[class*="sun"]').style.scale = `1.5`
+            document.querySelector('#header_dropdown > div:nth-of-type(1) i[class*="moon"]').style.scale = `1.0`
+        } else {
+            document.documentElement.style.setProperty('--color_light', '#444444')
+            document.documentElement.style.setProperty('--color_light_50', '#44444450')
+            document.documentElement.style.setProperty('--color_dark', '#bcbcbc')
+            document.documentElement.style.setProperty('--color_dark_50', '#bcbcbc50')
+            document.documentElement.style.setProperty('--color_grey', '#555555')
+            document.documentElement.style.setProperty('--color_theme', '#af1f3e')
+            document.documentElement.style.setProperty('--color_theme_50', '#af1f3e50')
+
+            document.getElementById('switchBtn').style.left = `22px`
+
+            document.querySelector('#header_dropdown > div:nth-of-type(1) i[class*="sun"]').style.scale = `1.0`
+            document.querySelector('#header_dropdown > div:nth-of-type(1) i[class*="moon"]').style.scale = `1.5`
+        }
     } else {
-        document.documentElement.style.setProperty('--color_light', '#444444')
-        document.documentElement.style.setProperty('--color_light_50', '#44444450')
-        document.documentElement.style.setProperty('--color_dark', '#bcbcbc')
-        document.documentElement.style.setProperty('--color_dark_50', '#bcbcbc50')
-        document.documentElement.style.setProperty('--color_grey', '#555555')
-        document.documentElement.style.setProperty('--color_theme', '#af1f3e')
-        document.documentElement.style.setProperty('--color_theme_50', '#af1f3e50')
+        if(lightmode != 'light') {
+            document.documentElement.style.setProperty('--color_light', '#ffffff')
+            document.documentElement.style.setProperty('--color_light_50', '#ffffff50')
+            document.documentElement.style.setProperty('--color_dark', '#000000')
+            document.documentElement.style.setProperty('--color_dark_50', '#00000050')
+            document.documentElement.style.setProperty('--color_grey', '#888888')
+            document.documentElement.style.setProperty('--color_theme', '#8a2be2')
+            document.documentElement.style.setProperty('--color_theme_50', '#8a2be250')
 
-        document.getElementById('switchBtn').style.left = `22px`
+            document.getElementById('switchBtn').style.left = `2px`
 
-        document.querySelector('#header_dropdown > div:nth-of-type(1) i[class*="sun"]').style.scale = `1.0`
-        document.querySelector('#header_dropdown > div:nth-of-type(1) i[class*="moon"]').style.scale = `1.5`
+            document.querySelector('#header_dropdown > div:nth-of-type(1) i[class*="sun"]').style.scale = `1.5`
+            document.querySelector('#header_dropdown > div:nth-of-type(1) i[class*="moon"]').style.scale = `1.0`
 
-        isLight = false
+            lightmode = 'light'
+            localStorage.setItem('lightmode', JSON.stringify(lightmode))
+        } else {
+            document.documentElement.style.setProperty('--color_light', '#444444')
+            document.documentElement.style.setProperty('--color_light_50', '#44444450')
+            document.documentElement.style.setProperty('--color_dark', '#bcbcbc')
+            document.documentElement.style.setProperty('--color_dark_50', '#bcbcbc50')
+            document.documentElement.style.setProperty('--color_grey', '#555555')
+            document.documentElement.style.setProperty('--color_theme', '#af1f3e')
+            document.documentElement.style.setProperty('--color_theme_50', '#af1f3e50')
+
+            document.getElementById('switchBtn').style.left = `22px`
+
+            document.querySelector('#header_dropdown > div:nth-of-type(1) i[class*="sun"]').style.scale = `1.0`
+            document.querySelector('#header_dropdown > div:nth-of-type(1) i[class*="moon"]').style.scale = `1.5`
+
+            lightmode = 'dark'
+            localStorage.setItem('lightmode', JSON.stringify(lightmode))
+        }
     }
 }
 const scroll2top = () => {
@@ -44,7 +80,6 @@ const scroll2top = () => {
 }
 const enableMobileNav = () => {
     if(!isMobileNav) {
-        
         // document.querySelector('.headerContainer__navbar').classList.add(headerContNav_Mobile)
 
         document.querySelector('.headerContainer').style.border = `none`

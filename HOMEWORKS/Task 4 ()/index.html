@@ -24,68 +24,197 @@
 
 
         <!-- START ====================== | MAIN | ====================== START -->
-        <main class="main">
+        <main class="main monoton-regular">
             <!-- HOMEPAGE -->
             <section class="home">
+                <!-- add display none to elements which animated appear on page reload -->
+                <!-- some info -->
+                <!-- cover header too, blurred window effect on header -->
                 <div class="homeContainer section">
+                    <button class="carousel_button" id="carousel_prev" onclick="carouselSlider('prev')"> ◄ </button>
+                    <button class="carousel_button" id="carousel_next" onclick="carouselSlider('next')"> ► </button>
+
+                    <article class="homeCarouselCard" id="homeCard_1">
+                        <div>
+                            <h2> card 1 </h2>
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, laborum porro. </p>
+                            <a href="#unt1tl3d">
+                                Visit
+                            </a>
+                        </div>
+                    </article>
+                    <article class="homeCarouselCard" id="homeCard_2">
+                        <div>
+                            <h2> card 2 </h2>
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, laborum porro. </p>
+                            <a href="#footer">
+                                Visit
+                            </a>
+                        </div>
+                    </article>
+                    <article class="homeCarouselCard" id="homeCard_3">
+                        <div>
+                            <h2> card 3 </h2>
+                            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, laborum porro. </p>
+                            <a href="#">
+                                Visit
+                            </a>
+                        </div>
+                    </article>
+
+                    <div class="carousel_radios">
+                        <button class="btn_carouselRadio btn_carouselRadio_active" id="btn_carouselRadio_1" onclick="carouselSlider(1)"></button>
+                        <button class="btn_carouselRadio" id="btn_carouselRadio_2" onclick="carouselSlider(2)"></button>
+                        <button class="btn_carouselRadio" id="btn_carouselRadio_3" onclick="carouselSlider(3)"></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BLOG -->
+            <section class="untitled1">
+                <article class="untitled1Container section">
+                    <h2> header of the section </h2>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    <div class="catalog">
+                        <div class="catalogCard flexCC"></div>
+                        <div class="catalogCard flexCC"></div>
+                        <div class="catalogCard flexCC"></div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- SOMETHING -->
+            <section class="untitled2">
+                <article class="untitled2Container section">
+                    <h2> SECTION #3 </h2>
+
+                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, distinctio! </p>
+                    <p> Pero tomé español de octavo grado, así que ¿dónde está la biblioteca? </p>
+
+                    <div>
+                        <div>
+                            <img src="./assets/home/3125259-8559140501-2013_.jpg" alt="image">
+                        </div>
+
+                        <div>
+                            <img src="./assets/home/MV5BM2Q5OTI0OGItYzlhYS00ZDQ3LTkzOGItOTcyNzdiMDk3OTYxXkEyXkFqcGc@._V1_.jpg" alt="image">
+                        </div>
+
+                        <div>
+                            <img src="./assets/home/gta-v-principal.png" alt="image">
+                        </div>
+
+                        <div>
+                            <img src="./assets/home/4123674-mwii-s03-announcement-021-b(3).jpg" alt="image">
+                        </div>
+
+                        <div>
+                            <img src="./assets/home/uAW9VAmI4OdFFbIbgM05GMrQZ4ERB3VCb9g5oIHn.jpg" alt="image">
+                        </div>
+
+                        <div>
+                            <img src="./assets/home/hl2.jpg" alt="image">
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- MODERN CARDS -->
+            <section class="untitled3" id="unt1tl3d">
+                <div class="untitled3Container section">
                     <article>
-                        add display none to elements which animated appear on page reload
-                        some info
-                        cover header too, blurred window effect on header
-                        carousel 2buttonSides radioButtonsOnLower
+                        <div class="u13_box" id="u13_box_1">
+                            <h3> Cart (1) </h3>
+                            <p> Lorem ipsum dolor sit amet. </p>
+                            <button> Read More </button>
+                        </div>
+                        <div class="u13_box" id="u13_box_2">
+                            <h3> Cart (2) </h3>
+                            <p> Lorem ipsum dolor sit amet. </p>
+                            <button> Read More </button>
+                        </div>
                     </article>
                 </div>
             </section>
 
-            <!--  -->
-            <section class="untitled1">
-                <div class="untitled1Container section">
-                    <article></article>
-                    blog
-                    diogonal cards
-                </div>
-            </section>
-
-            <!--  -->
-            <section class="untitled2">
-                <div class="untitled2Container section">
-                    <article></article>
-                    background fixed
-                    some text
-                </div>
-            </section>
-
-            <!--  -->
-            <section class="untitled3">
-                <div class="untitled3Container section">
-                    <article></article>
-                    cards
-                </div>
-            </section>
-
-            <!--  -->
+            <!-- VIDEO SECTION -->
             <section class="untitled4">
                 <div class="untitled4Container section">
-                    <article></article>
-                    bg video
-                    <video src="./assets/The ROCK Eyebrow (4K 60fps).mp4" defaultMuted="true" loop="false" draggable="false" controls></video>
+                    <div class="untitled4Container__overlay"></div>
+                    <video src="./assets/home/The ROCK Eyebrow (4K 60fps).mp4" defaultMuted="true" loop="false" draggable="false" onscroll="test123()">
+                        <!-- controls -->
+                    </video>
                 </div>
             </section>
 
-            <!--  -->
-            <section class="untitled5">
-                <div class="untitled5Container section">
-                    <article></article>
-                    about with some effects
-                </div>
-            </section>
-
-            <!--  -->
+            <!-- CONTACT US -->
             <section class="untitled6">
                 <div class="untitled6Container section">
-                    <article></article>
-                    contact
+                    <article>
+                        <h2> JOIN US </h2>
+
+                        <form>
+                            <div>
+                                <label for="firstname">
+                                    First Name:
+                                    <br>
+                                    <input type="text" name="firstname" id="firstname" placeholder="Enter your firstname">
+                                </label>
+                                <label for="lastname">
+                                    Last Name:
+                                    <br>
+                                    <input type="text" name="lastname" id="lastname" placeholder="Enter your lastname">
+                                </label>
+                            </div>
+
+                            <hr>
+                            
+                            <label for="email"> Email: </label>
+                            <br>
+                            <input type="email" name="email" id="email" placeholder="Enter your email">
+
+                            <hr>
+
+                            <div>
+                                Gender:
+                                <br>
+                                <input type="radio" name="gender" id="male" checked>
+                                <label for="male"> male </label>
+                                <input type="radio" name="gender" id="female">
+                                <label for="female"> female </label>
+                            </div>
+
+                            <hr>
+
+                            <label for="password"> Password: </label>
+                            <br>
+                            <input type="password" name="password" id="password" placeholder="Enter your password">
+
+                            <hr>
+
+                            <label for="message" role="banner"> Notes: </label>
+                            <br>
+                            <textarea name="message" id="message" placeholder="Add your notes"></textarea>
+
+                            <hr>
+
+                            <button class="btn" type="submit"> Join Us </button>
+                        </form>
+                    </article>
                 </div>
+            </section>
+
+            <!-- ABOUT US -->
+            <section class="untitled5">
+                <div class="untitled5Container section">
+                </div>
+                <article>
+                    <span id="lorem_l" contenteditable="true" onmouseenter="activateLetter(this)" style="top: 300px; left: 30%;">L</span>
+                    <span id="lorem_o" contenteditable="true" onmouseenter="activateLetter(this)" style="top: 300px; left: 40%;">O</span>
+                    <span id="lorem_r" contenteditable="true" onmouseenter="activateLetter(this)" style="top: 300px; left: 50%;">R</span>
+                    <span id="lorem_e" contenteditable="true" onmouseenter="activateLetter(this)" style="top: 300px; left: 60%;">E</span>
+                    <span id="lorem_m" contenteditable="true" onmouseenter="activateLetter(this)" style="top: 300px; left: 70%;">M</span>
+                </article>
             </section>
         </main>
         <!--  END  ====================== | MAIN | ======================  END  -->
@@ -102,43 +231,333 @@
 
         <!-- START ====================== | SCRIPTS | ====================== START -->
         <!-- FEATURES -->
-        <script src="./scripts.js"></script>
         <script src="./utils/features.js"></script>
         <script src="./utils/setPageTitle.js"></script>
+        <script src="./utils/changeLanguage.js"></script>
 
         <!-- COMPONENTS -->
         <script src="./components/headContents.js"></script>
         <script src="./components/Header.js"></script>
-        <script src="./components/HeadeMobile.js"></script>
+        <!-- <script src="./components/HeadeMobile.js"></script> -->
         <script src="./components/Footer.js"></script>
 
         <!-- CUSTOM SCRIPTS OF PAGES -->
         <script>
-            document.addEventListener('scroll', () => {
-                console.log(window.scrollY)
-            })
-
-            document.querySelector('video').addEventListener('loadedmetadata', () => {
-                console.log(
-                    document.querySelector('video').currentTime,
-                    document.querySelector('video').duration,
-                    // document.querySelector('video').style.top
-                )
-            })
-
-
-
-
-            // VARIABLES
-            let isMobile = false
+            // STATE VALUES
+            let isMobileHeaderContent = false
+            // let isMobile = false
 
             // COMPONENTS
             headContents('.')
-            !isMobile ? Header('.') : MobileHeader('.')
+            // !isMobile ? Header('.') : MobileHeader('.')
+            Header('.')
             Footer('.')
 
-            // SET TITLE OF THE PAGE
+            // SET DEFAULTS
             setTitle('LOGO', 'Home')
+            changeLanguage()
+            switchLight()
+
+            // MANAGE EVENTS
+            window.addEventListener('scroll', () => {
+                // VARIABLES
+                var header = document.getElementById('header')
+                var toTopBtn = document.getElementById('toTop')
+                var currentYposition = window.scrollY
+                var scrollLock = false
+                var videoSectionHeight = 911
+
+                // SHOW OR HIDE TOTOPBTN OVER SCROLL OFFSET
+                if(currentYposition > 400) {
+                    toTopBtn.style.visibility = `visible`
+                    toTopBtn.style.opacity = `100%`
+                    header.style.position = 'fixed'
+                } else {
+                    toTopBtn.style.visibility = `hidden`
+                    toTopBtn.style.opacity = `0%`
+                    header.style.position = 'absolute'
+                }
+
+                // CALCULATING SCROLLY OFFSET OF VIDEO SECTION
+                let offsetYsection1 = document.querySelector('.untitled1').offsetHeight
+                let offsetYsection2 = document.querySelector('.untitled2').offsetHeight
+                let offsetYsection3 = document.querySelector('.untitled3').offsetHeight
+                let offsetYsection4 = document.querySelector('.untitled4').offsetHeight
+                let totalOffset = offsetYsection1 + offsetYsection2 + offsetYsection3 + offsetYsection4
+
+                // console.log(
+                //     `
+                //     totalOffset: ${totalOffset}
+                //     currentYposition: ${currentYposition}
+                //     `
+                // )
+
+                // LOCK SCROLLING WHEN USER COVER SCREEN WITH VIDEO SECTION THEN RELEASE
+                if(currentYposition >= totalOffset && currentYposition <= totalOffset+videoSectionHeight) {
+                    scrollLock = true
+                    document.querySelector('.untitled4').style.position = `fixed`
+                    document.querySelector('.untitled4').style.marginTop = `0px`
+                } else if(currentYposition > totalOffset+videoSectionHeight) {
+                    scrollLock = false
+                    document.querySelector('.untitled4').style.position = `relative`
+                    document.querySelector('.untitled4').style.marginTop = `${videoSectionHeight}px`
+                } else {
+                    scrollLock = false
+                    document.querySelector('.untitled4').style.position = `relative`
+                    document.querySelector('.untitled4').style.marginTop = `0px`
+                }
+
+                // SET VIDEO CURRENT TIME OVER SCROLLY VALUE
+                if(scrollLock) {
+                    let startingScrollValue = totalOffset
+                    let currentScrollValue = window.scrollY-startingScrollValue
+                    let endScrollValue = totalOffset+videoSectionHeight-startingScrollValue
+                    let videoStartTime = 0
+                    let videoCurrentTime = document.querySelector('video').currentTime-videoStartTime
+                    let videoDuration = document.querySelector('video').duration-videoStartTime
+
+                    var scrollPercentage = (currentScrollValue/endScrollValue)*100
+                    var videoPercentage = (videoDuration*scrollPercentage)/100
+
+                    // console.log(
+                    //     `
+                    //     startingScrollValue: ${startingScrollValue}
+                    //     currentScrollValue: ${currentScrollValue}
+                    //     endScrollValue: ${endScrollValue}
+
+                    //     % —————————→ > | ${scrollPercentage}
+                    //     ------------------------------------------------------
+                    //     videoStartTime: ${videoStartTime}
+                    //     videoCurrentTime: ${videoCurrentTime}
+                    //     videoDuration: ${videoDuration}
+
+                    //     % —————————→ > | ${videoPercentage}
+                    //     `
+                    // )
+
+                    document.querySelector('video').currentTime = videoPercentage
+                }
+            })
+            window.addEventListener('resize', () => {
+                // let headerInnerHTML = Header('.')
+                if(window.innerWidth > 768) {
+                    if(!isMobileHeaderContent) {
+                        // Header('.')
+                        // changeLanguage()
+                        // switchLight()
+                        document.querySelector('#header').style = ``
+                        // document.querySelector('.headerContainer').style = ``
+                        // document.querySelector('.headerContainer__navbar').style = ``
+                        // document.getElementById('commonOverlay').style = ``
+
+                        // document.querySelector('#header').innerHTML = ``
+                        // document.querySelector('#header').innerHTML = headerInnerHTML
+                        document.querySelector('#commonOverlay').style.display = `none`
+                    }
+                    isMobileHeaderContent = true
+                } else {
+                    if(isMobileHeaderContent) {
+                        // Header('.')
+                        // changeLanguage()
+                        // switchLight()
+                        document.querySelector('#header').style = ``
+                        // document.querySelector('.headerContainer').style = ``
+                        // document.querySelector('.headerContainer__navbar').style = ``
+                        // document.getElementById('commonOverlay').style = ``
+
+                        // document.querySelector('#header').innerHTML = ``
+                        // document.querySelector('#header').innerHTML = headerInnerHTML
+                        document.querySelector('#commonOverlay').style.display = `none`
+                    }
+                    isMobileHeaderContent = false
+                }
+            })
+        </script>
+
+        <!-- HOME SECTION CAROUSEL -->
+        <script>
+            // STATE VALUES
+            let currentSlide = 1
+
+            function handleAutoSliding() {
+                if(currentSlide >= 3) {
+                    clearInterval(autoSlider)
+                } else {
+                    currentSlide = currentSlide + 1
+                    carouselSlider(currentSlide)
+                }
+            }
+
+            const autoSlider = setInterval(
+                handleAutoSliding, 1000*2 // 1000ms * 2x = 2seconds
+            )
+            
+
+            // HANDLE CAROUSEL SLIDES
+            function carouselSlider(behavior) {
+                // HOME CAROUSEL BUTTONS
+                let homeBtn_left = document.getElementById('carousel_prev')
+                let homeBtn_right = document.getElementById('carousel_next')
+
+                // HINE CAROUSEL RADIOS
+                let radioBtn_1 = document.getElementById('btn_carouselRadio_1')
+                let radioBtn_2 = document.getElementById('btn_carouselRadio_2')
+                let radioBtn_3 = document.getElementById('btn_carouselRadio_3')
+
+                // HOME CAROUSEL CARDS
+                let homeCard_1 = document.getElementById(`homeCard_1`)
+                let homeCard_2 = document.getElementById(`homeCard_2`)
+                let homeCard_3 = document.getElementById(`homeCard_3`)
+                let homeCards = [homeCard_1, homeCard_2, homeCard_3]
+
+                // CONDITIONS
+                if(behavior == 'prev') {
+                    if(currentSlide == 2) {
+                        homeCard_1.style.left = `0%`
+                        homeCard_2.style.left = `100%`
+                        homeCard_3.style.left = `100%`
+                        currentSlide--
+                    } else if(currentSlide == 3) {
+                        homeCard_1.style.left = `-100%`
+                        homeCard_2.style.left = `0%`
+                        homeCard_3.style.left = `100%`
+                        currentSlide--
+                    }
+                } else if(behavior == 'next') {
+                    if(currentSlide == 1) {
+                        homeCard_1.style.left = `-100%`
+                        homeCard_2.style.left = `0%`
+                        homeCard_3.style.left = `100%`
+                        currentSlide++
+                    } else if(currentSlide == 2) {
+                        homeCard_1.style.left = `-100%`
+                        homeCard_2.style.left = `-100%`
+                        homeCard_3.style.left = `0%`
+                        currentSlide++
+                    }
+                } else if(behavior == 1) {
+                    homeCard_1.style.left = `0%`
+                    homeCard_2.style.left = `100%`
+                    homeCard_3.style.left = `100%`
+                    currentSlide = 1
+                } else if(behavior == 2) {
+                    homeCard_1.style.left = `-100%`
+                    homeCard_2.style.left = `0%`
+                    homeCard_3.style.left = `100%`
+                    currentSlide = 2
+                } else if(behavior == 3) {
+                    homeCard_1.style.left = `-100%`
+                    homeCard_2.style.left = `-100%`
+                    homeCard_3.style.left = `0%`
+                    currentSlide = 3
+                }
+
+                // EDIT RADIO BUTTONS VISUAL
+                if(currentSlide == 1) {
+                    radioBtn_1.classList.add('btn_carouselRadio_active')
+                    radioBtn_2.classList.remove('btn_carouselRadio_active')
+                    radioBtn_3.classList.remove('btn_carouselRadio_active')
+                } else if(currentSlide == 2) {
+                    radioBtn_1.classList.remove('btn_carouselRadio_active')
+                    radioBtn_2.classList.add('btn_carouselRadio_active')
+                    radioBtn_3.classList.remove('btn_carouselRadio_active')
+                } else if(currentSlide == 3) {
+                    radioBtn_1.classList.remove('btn_carouselRadio_active')
+                    radioBtn_2.classList.remove('btn_carouselRadio_active')
+                    radioBtn_3.classList.add('btn_carouselRadio_active')
+                }
+            }
+        </script>
+
+        <!-- REST OF FEATURES -->
+        <script>
+            // STATE VALUES
+            let isAnyActiveLetter = false
+
+            // SECTION UNTITLED3 ONCE ANIMATION BY SCROLL VALUE
+            window.addEventListener('scroll', () => {
+                let isAnimated = false
+
+                if(!isAnimated) {
+                    let offsetUnt1tl3d = document.querySelector('.home').offsetHeight + document.querySelector('.untitled1').offsetHeight + document.querySelector('.untitled2').offsetHeight - 200
+    
+                    // console.log(
+                    //     `
+                    //         home: ${document.querySelector('.home').offsetHeight}
+                    //         untitled1: ${document.querySelector('.untitled1').offsetHeight}
+                    //         untitled2: ${document.querySelector('.untitled2').offsetHeight}
+                    //         ----------------------------------------------
+                    //         total height: ${offsetUnt1tl3d}
+                    //         scrollY: ${window.scrollY}
+                    //     `
+                    // )
+
+                    if(window.scrollY >= offsetUnt1tl3d) {
+                        document.getElementById('u13_box_1').style.animation = `loadContent 0.2s ease-in-out 0s 1 normal forwards`
+                        document.getElementById('u13_box_2').style.animation = `loadContent 0.2s ease-in-out 0.35s 1 normal forwards`
+                    }
+                }
+            }, {once: false})
+
+            // SELECT LETTER TO CONTROL
+            function activateLetter(element) {
+                // THERE IS CHOOSEN LETTER
+                isAnyActiveLetter = true
+
+                // SELECT LETTERS
+                let letterL = document.getElementById('lorem_l')
+                let letterO = document.getElementById('lorem_o')
+                let letterR = document.getElementById('lorem_r')
+                let letterE = document.getElementById('lorem_e')
+                let letterM = document.getElementById('lorem_m')
+
+                // ADD NEON BG TO SHOW WHICH IS ACTIVE
+                letterL.style.animation = ``
+                letterO.style.animation = ``
+                letterR.style.animation = ``
+                letterE.style.animation = ``
+                letterM.style.animation = ``
+                element.style.animation = `glowActive 0.5s linear(0 0%, 0.22 2.1%, 0.86 6.5%, 1.11 8.6%, 1.3 10.7%, 1.35 11.8%, 1.37 12.9%, 1.37 13.7%, 1.36 14.5%, 1.32 16.2%, 1.03 21.8%, 0.94 24%, 0.89 25.9%, 0.88 26.85%, 0.87 27.8%, 0.87 29.25%, 0.88 30.7%, 0.91 32.4%, 0.98 36.4%, 1.01 38.3%, 1.04 40.5%, 1.05 42.7%, 1.05 44.1%, 1.04 45.7%, 1 53.3%, 0.99 55.4%, 0.98 57.5%, 0.99 60.7%, 1 68.1%, 1.01 72.2%, 1 86.7%, 1 100%) 0s 1 normal forwards`
+
+                // CONTROLLERS BY KEYDOWN EVENTS
+                if(isAnyActiveLetter) {
+                    window.addEventListener('keydown', (event) => {
+                        var isShift = event.shiftKey
+                        var pressedKey = event.key
+                        var prevLetterPosY = element.offsetTop
+                        var prevLetterPosX = element.offsetLeft
+                        var currentLetterPosY = element.style.top || prevLetterPosY
+                        var currentLetterPosX = element.style.left || prevLetterPosX
+
+                        if(currentLetterPosY) {
+                            currentLetterPosY = Number(currentLetterPosY.slice(0, currentLetterPosY.length-2))
+                        }
+                        if(currentLetterPosX) {
+                            currentLetterPosX = Number(currentLetterPosX.slice(0, currentLetterPosX.length-2))
+                        }
+
+                        if(pressedKey.toLowerCase() === 'w' && !isShift) {
+                            element.style.top = `${currentLetterPosY - 1}px`
+                        } else if(pressedKey.toLowerCase() === 's' && !isShift) {
+                            element.style.top = `${currentLetterPosY + 1}px`
+                        } else if(pressedKey.toLowerCase() === 'a' && !isShift) {
+                            element.style.left = `${currentLetterPosX - 1}px`
+                        } else if(pressedKey.toLowerCase() === 'd' && !isShift) {
+                            element.style.left = `${currentLetterPosX + 1}px`
+                        }
+
+                        else if(pressedKey.toLowerCase() === 'w' && isShift) {
+                            element.style.top = `${currentLetterPosY - 10}px`
+                        } else if(pressedKey.toLowerCase() === 's' && isShift) {
+                            element.style.top = `${currentLetterPosY + 10}px`
+                        } else if(pressedKey.toLowerCase() === 'a' && isShift) {
+                            element.style.left = `${currentLetterPosX - 10}px`
+                        } else if(pressedKey.toLowerCase() === 'd' && isShift) {
+                            element.style.left = `${currentLetterPosX + 10}px`
+                        }
+                    })
+                }
+            }
         </script>
         <!--  END  ====================== | SCRIPTS | ======================  END  -->
         
