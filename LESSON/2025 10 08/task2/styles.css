@@ -1,0 +1,32 @@
+/* ZEROING DEFAULTS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+main {
+    width: 100%;
+}
+
+section {
+    width: 1000px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+section:nth-of-type(1) {
+    background-color: aliceblue;
+}
+section:nth-of-type(2) {
+    background-color: beige;
+}
+section:nth-of-type(3) {
+    background-color: burlywood;
+}
+section:nth-of-type(4) {
+    background-color: cornsilk;
+}
