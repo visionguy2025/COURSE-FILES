@@ -23,10 +23,21 @@ section:nth-of-type(1) {
 }
 section:nth-of-type(2) {
     background-color: beige;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
 }
 section:nth-of-type(3) {
     background-color: burlywood;
 }
 section:nth-of-type(4) {
     background-color: cornsilk;
+}
+
+#video {
+    width: 100%;
+    height: auto;
 }

@@ -1,7 +1,6 @@
 {
   "name": "task1",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,6 +10,9 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "http-server": "^14.1.1",
     "three": "^0.180.0"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
