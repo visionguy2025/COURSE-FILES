@@ -3,18 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #000000;
+        }
+
+        .video {
+            width: 100vw;
+            height: 100vh;
+
+            background-position: center;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+
+            background-image: url(./folder/0001.png);
+
+            transition: 100ms linear;
+        }
+    </style>
 </head>
 <body>
+
+    <!-- TEST FOR ANOTHER PERSONAL PROJECT  -->
+    <video src="../../2025 10 08/task2/The ROCK Eyebrow (4K 60fps).mp4" id="video" preload="metadata" muted></video>
+    <!-- <div class="video"></div> -->
+
+    <!-- SCRIPT -->
     <script>
+        // test scroll value with video and image to check is it about scroll event or video performance
 
+        // STATE VALUES
         let value = 0
-        function test() {
-            // event im this line
-            value < 100 ? requestAnimationFrame(test) && value++ : value
-        }
-        requestAnimationFrame(test)
+        // let value = 1
+        let isScroll = false
+        // const video = document.getElementById('video')
+        // let currentTime = video.currentTime
+        // let duration = video.duration
+        let newTimeout4test
 
+        // HANDLERS
+        function untitled(e) {
+            e.preventDefault()
+            const video = document.getElementById('video')
+            // const video = document.getElementsByClassName('video')[0]
+            let currentTime = video.currentTime
+            let duration = video.duration
+
+            // value+1 <= 100 ? value++ : value
+            // e.deltaY > 0 && value+1 <= 138 ? value++ : value
+            // e.deltaY < 0 && value-1 >= 1 ? value-- : value
+            e.deltaY > 0 && value+1 <= 100 ? value++ : value
+            e.deltaY < 0 && value-1 >= 0 ? value-- : value
+
+            // let valueStr = value.toString().padStart(4, '0')
+            // video.style.backgroundImage = `url(./folder/${valueStr}.png)`
+
+            // video.currentTime = (value * duration) / 100
+
+            // console.log(`
+            // percentage value: ${value}
+            // video currentTime: ${currentTime}
+            // `)
+            if(!isScroll) {
+                isScroll = true
+                // console.log(isScroll)
+            }
+            clearTimeout(newTimeout4test)
+            newTimeout4test = setTimeout(
+                () => {
+                    if(isScroll) {
+                        isScroll = false
+                        // console.log(isScroll)
+                        console.log(value, video.currentTime)
+                        video.currentTime = (value * duration) / 100
+                    }
+                }, 10
+            )
+            // requestAnimationFrame(() => {newTimeout4test})
+            // console.log(valueStr)
+            // console.log(e)
+        }
+
+        // DON'T TRY THIS AT HOME
+        // setInterval(
+        //     () => {
+        //         if(isScroll) {
+        //             video.currentTime = (value * duration) / 100
+        //             console.log(value)
+        //         }
+        //     }, 10
+        // )
+
+        // EVENT
+        window.addEventListener('wheel', untitled, {passive: false})
     </script>
+
 </body>
 </html>

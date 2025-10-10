@@ -5,7 +5,7 @@ const choosenSection = document.querySelector('section:nth-of-type(2)')
 // window.scrollTo({behavior: 'smooth'})
 
 // STATE VALUES
-let scrollDirection = 'down'
+let scrollDirection = 'down' // event.deltaY > 0 (100) is down, < 0 (-100) is up
 let scrollDirectionIcon = '▼'
 let value = 0
 let isScrollLocked = false

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title> Document </title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        button {
+            cursor: pointer;
+        }
+
+        .container {
+            width: 100vw;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        table, tr, th, td {
+            border: 1px solid #000000;
+            border-collapse: collapse;
+        }
+        .table th, .table td {
+            padding: 10px;
+        }
+
+        .modalForm {
+            z-index: 2;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: fit-content;
+            height: fit-content;
+
+            background-color: #ffffff;
+            border: 2px solid #000000;
+
+            padding: 10px;
+        }
+        .modalForm input {
+            margin: 10px 0;
+            border: 1px solid #000000;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+
+        .overlay {
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100vw;
+            height: 100vh;
+
+            background: #aaaaaa75;
+            backdrop-filter: blur(5px);
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- HOMEWORK -->
+    <div class="container">
+        <div class="modalForm hidden">
+            <label for="form_inp_ad"> Ad: </label>
+            <input type="text" id="form_inp_ad" placeholder="Adinizi daxil edin: ">
+            <br>
+            <label for="form_inp_soyad"> Soyad: </label>
+            <input type="text" id="form_inp_soyad" placeholder="Soyadinizi daxil edin: ">
+            <br>
+            <label for="form_inp_"> Yas: </label>
+            <input type="number" id="form_inp_yas" placeholder="Yasinizi daxil edin: ">
+            <br>
+            <label for="form_inp_nomre"> Nomre: </label>
+            <input type="tel" id="form_inp_nomre" placeholder="Nomrenizi daxil edin: " title="Numune: 994509876543">
+            <br>
+            <button id="modalForm_cancelBtn"> Legv et </button>
+            <button id="modalForm_addBtn"> Elave et </button>
+        </div>
+        <div class="overlay hidden"></div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th> # </th>
+                    <th> Ad </th>
+                    <th> Soyad </th>
+                    <th> Yas </th>
+                    <th> Nomre </th>
+                    <th>
+                        <button id="table_add"> + </button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- JS -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // GET DB FROM LOCAL STORAGE OR CREATE NEW FAKE IF DOESN'T EXIST
+        let DB_LIST
+        if(JSON.parse(localStorage.getItem('database'))) {
+            DB_LIST = JSON.parse(localStorage.getItem('database'))
+        } else {
+            DB_LIST = [
+                {
+                    ad: 'John',
+                    soyad: 'Smith',
+                    yas: 27,
+                    nomre: '994501234567'
+                },
+                {
+                    ad: 'Ali',
+                    soyad: 'Kisi',
+                    yas: 100,
+                    nomre: '994505050505'
+                }
+            ]
+        }
+
+        // DEFINE HTML ELEMENTS
+        const container = document.querySelector('.container')
+        const table = document.getElementsByClassName('table')[0]
+        const tableBody = document.querySelector('.table > tbody')
+        const tableAddBtn = document.getElementById('table_add')
+        const modalForm = document.querySelector('.modalForm')
+        const modalFormCancelBtn = document.getElementById('modalForm_cancelBtn')
+        const modalFormSubmitBtn = document.getElementById('modalForm_addBtn')
+
+        // FEATURES
+        function getAllRows() {
+            let allRows = ``
+
+            if(DB_LIST.length) {
+                for(let i=0; i<DB_LIST.length; i++) {
+                    var currentPerson = DB_LIST[i]
+                    var newRow = `
+                        <tr>
+                            <td> ${i} </td>
+                            <td> ${currentPerson.ad} </td>
+                            <td> ${currentPerson.soyad} </td>
+                            <td> ${currentPerson.yas} </td>
+                            <td> ${currentPerson.nomre} </td>
+                            <td> <button onclick="deleteCurrentData(this)" id="deleteData_${i}" class="deleteData"> Sil </button> </td>
+                        </tr>
+                    `
+
+                    allRows += newRow
+                }
+            } else {
+                allRows = `EMPTY`
+            }
+
+            tableBody.innerHTML = allRows
+        }
+        function addNewData() {
+            let newPersonData = {
+                ad: document.getElementById('form_inp_ad').value,
+                soyad: document.getElementById('form_inp_soyad').value,
+                yas: document.getElementById('form_inp_yas').value,
+                nomre: document.getElementById('form_inp_nomre').value
+            }
+
+            DB_LIST.push(newPersonData)
+            localStorage.setItem('database', JSON.stringify(DB_LIST))
+
+            document.getElementById('form_inp_ad').value = ''
+            document.getElementById('form_inp_soyad').value = ''
+            document.getElementById('form_inp_yas').value = ''
+            document.getElementById('form_inp_nomre').value = ''
+
+            getAllRows()
+            toggleShowModalForm()
+        }
+        function deleteCurrentData(e) {
+            let updated_db = []
+            let btn_id = e.id
+            btn_id = Number(btn_id.slice(11, btn_id.length))
+            
+            for(var i=0; i<DB_LIST.length; i++) {
+                if(i != btn_id) {
+                    updated_db.push(DB_LIST[i])
+                }
+            }
+            
+            DB_LIST = updated_db
+            localStorage.setItem('database', JSON.stringify(DB_LIST))
+
+            getAllRows()
+        }
+        function toggleShowModalForm() {
+            document.getElementsByClassName('modalForm')[0].classList.toggle('hidden')
+            document.getElementsByClassName('overlay')[0].classList.toggle('hidden')
+        }
+        function cancelForm() {
+            document.getElementById('form_inp_ad').value = ''
+            document.getElementById('form_inp_soyad').value = ''
+            document.getElementById('form_inp_yas').value = ''
+            document.getElementById('form_inp_nomre').value = ''
+
+            toggleShowModalForm()
+        }
+
+        // EVENTS
+        document.addEventListener('DOMContentLoaded', getAllRows)
+        modalFormSubmitBtn.addEventListener('click', addNewData)
+        tableAddBtn.addEventListener('click', toggleShowModalForm)
+        modalFormCancelBtn.addEventListener('click', cancelForm)
+    </script>
+
+</body>
+</html>
